@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InicioComponent } from './modules/inicio/page/inicio/inicio.component';
 
 const routes: Routes = [
 
-  //routeo modulo inicio al inciar la página (mientras cargan modulos)
+  //routeo componente inicio al inciar la página (mientras cargan modulos)
   {
-    path: ''
-    ,loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
+    path: '',component:InicioComponent
   },
 
   //routeo modulo inicio

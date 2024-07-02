@@ -9,7 +9,8 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     /*para pantallas chicas (celular)*/
 
     mat-toolbar {
-        background-color: rgb(202, 172, 106);
+        background-color: #61412d;
+        color: rgb(240, 233, 211);
     }
 
     /*oculta éstas secciones en caso de pantalla mayor a 700px*/
@@ -31,7 +32,8 @@ la pantalla (px) o resolución del dispositivo que abre la app.
 
     /*para pantallas computadora, televisor, tablet*/
     mat-toolbar {
-        background-color: rgb(219, 189, 125);
+        background-color: #4b3426;
+        color: rgb(255, 255, 255);
     }
 
     /*oculta ésta sección en caso de pantalla menor a 700px*/

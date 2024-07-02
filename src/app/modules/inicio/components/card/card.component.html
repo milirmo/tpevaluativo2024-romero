@@ -1,0 +1,16 @@
+
+<!--div que reune todas las tarjetas que se creen-->
+  <div class="tarjetas">
+
+    <div class="card" style="width: 18rem;" *ngFor="let tarjeta of tarjetas">
+        <img src="{{tarjeta.img}}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{tarjeta.titulo}}</h5>
+          <h5 class="card-title">${{tarjeta.precio}}</h5>
+          <p class="card-text">{{tarjeta.genero}}</p>
+          <p class="card-text">{{tarjeta.autor}}</p>
+          <a href="#" class="btn btn-primary">Ver producto</a>
+        </div>
+      </div>
+
+  </div>

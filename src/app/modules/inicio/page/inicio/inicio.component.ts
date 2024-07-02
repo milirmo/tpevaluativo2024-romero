@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Libro } from 'src/app/models/libro';
 
 @Component({
   selector: 'app-inicio',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-
+  
 }
+

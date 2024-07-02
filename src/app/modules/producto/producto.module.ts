@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ProductoRoutingModule } from './producto-routing.module';
 import { LibrosComponent } from './page/libros/libros.component';
-import { SeparadoresComponent } from './page/separadores/separadores.component';
 import { OfertasComponent } from './page/ofertas/ofertas.component';
 import { TodosproductosComponent } from './page/todosproductos/todosproductos.component';
 
@@ -11,7 +10,6 @@ import { TodosproductosComponent } from './page/todosproductos/todosproductos.co
 @NgModule({
   declarations: [
     LibrosComponent,
-    SeparadoresComponent,
     OfertasComponent,
     TodosproductosComponent
   ],
@@ -22,7 +20,6 @@ import { TodosproductosComponent } from './page/todosproductos/todosproductos.co
   exports: [
     ProductoRoutingModule,
     LibrosComponent,
-    SeparadoresComponent,
     OfertasComponent
   ]
 })

@@ -1,0 +1,69 @@
+/* Estilo básico para todas las tarjetas */
+.tarjetas {
+    display: flex; /* Utiliza flexbox para alinear las tarjetas en una fila */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas adicionales si no caben en el contenedor */
+    gap: 20px; /* Espacio entre cada tarjeta */
+    justify-content: center; /* Centra las tarjetas horizontalmente dentro del contenedor */
+    margin-top: 3%; /* Margen superior del contenedor de tarjetas */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    width: 18rem; /* Ancho fijo para cada tarjeta */
+    border: 1px solid #ccc; /* Borde delgado y color gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    transition: transform 0.3s ease; /* Transición suave al transformar la tarjeta */
+    padding: 15px; /*Borde interno para la tarjeta*/
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta ligeramente al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+.card-body {
+    padding: 20px; /* Relleno interno del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.2rem; /* Tamaño de fuente del título de la tarjeta */
+    margin-bottom: 10px; /* Margen inferior del título */
+}
+
+.card-subtitle {
+    font-size: 1rem; /* Tamaño de fuente del subtítulo de la tarjeta */
+    margin-bottom: 5px; /* Margen inferior del subtítulo */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Tamaño de fuente del texto de la tarjeta */
+    color: #666; /* Color del texto gris oscuro */
+    margin-bottom: 5px; /* Margen inferior del texto */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo azul para el botón */
+    color: #fff; /* Color de texto blanco para el botón */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Relleno interior del botón */
+    font-size: 0.9rem; /* Tamaño de fuente del botón */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Media query para pantallas más pequeñas (máximo 768px de ancho) */
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column; /* Cambia el diseño de las tarjetas a una columna */
+        align-items: center; /* Centra las tarjetas verticalmente */
+    }
+    
+    .card {
+        width: calc(100% - 20px); /* Ancho de tarjeta calculado para ocupar el ancho completo menos el espacio entre tarjetas */
+        max-width: 400px; /* Ancho máximo de la tarjeta */
+    }
+} 

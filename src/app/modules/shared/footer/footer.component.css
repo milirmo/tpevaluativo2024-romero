@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el footer */
+.site-footer {
+    background-color: #61412d;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    background-color: #8a5c3f;
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
+    font-size: 0.8em;
+}
+
+
+/*ESTILO PARA PANTALLAS PEQUEÑAS*/
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a una disposición de columna en pantallas más pequeñas */
+        text-align: center; /* Centra todo el contenido cuando está en columna */
+    }
+
+    .footer-logo,
+    .footer-nav,
+    .footer-contact {
+        margin-bottom: 20px; /* Agrega espacio entre las secciones en pantallas pequeñas */
+    }
+
+    .footer-nav {
+        order: 3; /* Cambia el orden de la navegación a la parte inferior en pantallas pequeñas */
+    }
+}
