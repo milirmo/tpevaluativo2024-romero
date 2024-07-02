@@ -1,13 +1,48 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+
+
+  <!--CUANDO LA PANTALLA SEA MENOR A 700PX, SE MOSTRARÁ: -->
+
+    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
+      <mat-icon>menú</mat-icon>
+    </button>
+  <mat-menu #seccion> <!--"#nombre" vincula con [matMenuTriggerFor]-->
+    <button mat-menu-item routerLink="inicio">Inicio</button>
+    <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
+  </mat-menu>
+
+
+
+  <!--CUANDO LA PANTALLA SEA MAYOR A 700px, SE MOSTRARÁ: -->
+
+    <!--carrito (próximamente)-->
+    <button mat-icon-button class="example-icon carrito" aria-label="Example icon-button with heart icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+
+    <!--boton para dirigirse a la página inicio (luego se debe importar en shared.module.ts) -->
+    <button mat-button routerLink="inicio">Inicio</button>
+
+    <!--boton menu desplegable (para ir a los productos) -->
+    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+    <mat-menu #productos="matMenu">
+    <button mat-menu-item routerLink="productos">Todos los productos</button>
+    <button mat-menu-item routerLink="libros">Libros</button>
+    <button mat-menu-item routerLink="separadores">Separadores de páginas</button>
+    <button mat-menu-item routerLink="ofertas">Combos & Ofertas</button>
+    </mat-menu>
+
+
+    <span class="example-spacer"></span>
+
+
+    <!--inicio de sesión y registro de un nuevo usuario -->
+    <button mat-button [matMenuTriggerFor]="usuario">
+      <mat-icon>account_circle</mat-icon>
+     </button>
+      <mat-menu #usuario="matMenu">
+     <button mat-menu-item routerLink="/registro">Registrarse</button>
+     <button mat-menu-item routerLink="/inicio-sesion">Iniciar sesión</button>
+     </mat-menu>
+
 </mat-toolbar>

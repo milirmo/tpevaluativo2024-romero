@@ -3,16 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-  //routeo modulo autentificacion
+  //routeo modulo inicio al inciar la página (mientras cargan modulos)
   {
-    path: 'autentificacion'
-    ,loadChildren: () => import('./modules/autentificacion/autentificacion.module').then(m => m.AutentificacionModule)
+    path: ''
+    ,loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
   },
 
   //routeo modulo inicio
   {
     path: 'inicio'
     ,loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
+  },
+
+  //routeo modulo autentificacion
+  {
+    path: 'autentificacion'
+    ,loadChildren: () => import('./modules/autentificacion/autentificacion.module').then(m => m.AutentificacionModule)
   },
 
   //routeo modulo producto
