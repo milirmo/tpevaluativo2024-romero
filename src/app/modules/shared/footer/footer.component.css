@@ -23,6 +23,7 @@ body {
 
 .footer-logo img {
     max-width: 150px;
+    border-radius: 100px;
 }
 
 .footer-nav ul {
@@ -45,12 +46,18 @@ body {
     text-decoration: none;
 }
 
+.nav{
+    background-color: #503524;
+    padding: 10px;
+    border-radius: 50px;
+}
+
 .footer-contact p {
     margin: 5px 0;
 }
 
 .footer-bottom {
-    background-color: #8a5c3f;
+    background-color: #503524;
     text-align: center;
     padding: 10px 0;
     color: #ccc;

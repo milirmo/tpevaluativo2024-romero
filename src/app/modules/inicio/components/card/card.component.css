@@ -1,69 +1,67 @@
-/* Estilo básico para todas las tarjetas */
+/* Estilos generales para el contenedor de las tarjetas */
 .tarjetas {
-    display: flex; /* Utiliza flexbox para alinear las tarjetas en una fila */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas adicionales si no caben en el contenedor */
-    gap: 20px; /* Espacio entre cada tarjeta */
-    justify-content: center; /* Centra las tarjetas horizontalmente dentro del contenedor */
-    margin-top: 3%; /* Margen superior del contenedor de tarjetas */
-}
-
-/* Estilos para cada tarjeta */
-.card {
-    width: 18rem; /* Ancho fijo para cada tarjeta */
-    border: 1px solid #ccc; /* Borde delgado y color gris claro */
+    display: flex; /* Mostrar las tarjetas en una fila */
+    flex-wrap: wrap; /* Envolver las tarjetas cuando no quepan en una sola fila */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centrar las tarjetas horizontalmente */
+    margin-bottom: 3%;
+  }
+  
+  /* Estilos para cada tarjeta individual */
+  .card {
+    width: 18rem; /* Ancho base de cada tarjeta */
+    border: 1px solid #ccc; /* Borde delgado con color gris claro */
     border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
-    transition: transform 0.3s ease; /* Transición suave al transformar la tarjeta */
-    padding: 15px; /*Borde interno para la tarjeta*/
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Levanta la tarjeta ligeramente al pasar el ratón */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-}
-
-.card-body {
-    padding: 20px; /* Relleno interno del cuerpo de la tarjeta */
-}
-
-.card-title {
-    font-size: 1.2rem; /* Tamaño de fuente del título de la tarjeta */
-    margin-bottom: 10px; /* Margen inferior del título */
-}
-
-.card-subtitle {
-    font-size: 1rem; /* Tamaño de fuente del subtítulo de la tarjeta */
-    margin-bottom: 5px; /* Margen inferior del subtítulo */
-}
-
-.card-text {
-    font-size: 0.9rem; /* Tamaño de fuente del texto de la tarjeta */
-    color: #666; /* Color del texto gris oscuro */
-    margin-bottom: 5px; /* Margen inferior del texto */
-}
-
-.btn-primary {
-    background-color: #007bff; /* Color de fondo azul para el botón */
-    color: #fff; /* Color de texto blanco para el botón */
-    border: none; /* Sin borde */
-    padding: 8px 16px; /* Relleno interior del botón */
-    font-size: 0.9rem; /* Tamaño de fuente del botón */
-    text-decoration: none; /* Sin subrayado */
-}
-
-.btn-primary:hover {
-    background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
-}
-
-/* Media query para pantallas más pequeñas (máximo 768px de ancho) */
-@media (max-width: 768px) {
+    overflow: hidden; /* Ocultar contenido que sobresalga del borde */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Efecto de escalar la tarjeta al hacer hover */
+  }
+  
+  .card-img-top {
+    height: 500px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor sin deformarla */
+  }
+  
+  .card-body {
+    padding: 1rem; /* Espaciado interno del cuerpo de la tarjeta */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Tamaño del título */
+    margin-bottom: 0.5rem; /* Margen inferior del título */
+  }
+  
+  .card-text {
+    color: #666; /* Color de texto gris */
+    margin-bottom: 0.5rem; /* Margen inferior del texto */
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    background-color: #503524; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    padding: 0.5rem 1rem; /* Relleno del botón */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  }
+  
+  .btn:hover {
+    background-color: #774e34; /* Cambiar color de fondo al hacer hover */
+  }
+  
+  /* Estilos para hacer las tarjetas responsivas */
+  @media (max-width: 768px) {
     .tarjetas {
-        flex-direction: column; /* Cambia el diseño de las tarjetas a una columna */
-        align-items: center; /* Centra las tarjetas verticalmente */
+      flex-direction: column; /* Cambiar a una columna cuando el tamaño de pantalla sea menor */
+      align-items: center; /* Centrar las tarjetas verticalmente */
     }
-    
+  
     .card {
-        width: calc(100% - 20px); /* Ancho de tarjeta calculado para ocupar el ancho completo menos el espacio entre tarjetas */
-        max-width: 400px; /* Ancho máximo de la tarjeta */
+      width: calc(100% - 20px); /* Ancho completo menos el espacio entre tarjetas */
     }
-} 
+  }
