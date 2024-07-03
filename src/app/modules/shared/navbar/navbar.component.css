@@ -4,7 +4,6 @@ Media querys son estilos que se aplican dependiendo de
 la pantalla (px) o resolución del dispositivo que abre la app.
 */
 
-
 @media(min-width: 300px) and (max-width: 700px) {
     /*para pantallas chicas (celular)*/
 

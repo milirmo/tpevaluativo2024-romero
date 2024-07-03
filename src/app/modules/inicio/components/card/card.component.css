@@ -50,10 +50,6 @@
     transition: background-color 0.3s ease; /* Transición suave del color de fondo */
   }
   
-  .btn:hover {
-    background-color: #774e34; /* Cambiar color de fondo al hacer hover */
-  }
-  
   /* Estilos para hacer las tarjetas responsivas */
   @media (max-width: 768px) {
     .tarjetas {
