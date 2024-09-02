@@ -11,11 +11,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //trabaja con
 import { AngularFireStorageModule } from '@angular/fire/compat/storage'; //trabaja con imagenes y archivos
 import { InicioModule } from './modules/inicio/inicio.module'; //modulo inicio
 import { ProductoModule } from './modules/producto/producto.module'; //modulo productos
-import { AutentificacionModule } from './modules/autentificacion/autentificacion.module'; //modulo autentificacion
+import { AutentificacionModule } from './modules/autentificacion/autentificacion.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

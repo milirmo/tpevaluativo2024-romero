@@ -24,7 +24,6 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     .carrito{
         margin-left: -50px;
     }
-
 }
 
 @media(min-width: 700px) {
