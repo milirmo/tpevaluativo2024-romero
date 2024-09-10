@@ -10,9 +10,9 @@ import Swal from 'sweetalert2';
 import * as CryptoJS from 'crypto-js';
 
 @Component({
-  selector: 'app-iniciodesesion',
-  templateUrl: './iniciodesesion.component.html',
-  styleUrls: ['./iniciodesesion.component.css']
+  selector: 'app-iniciosesion',
+  templateUrl: './iniciosesion.component.html',
+  styleUrls: ['./iniciosesion.component.css']
 })
 
 export class IniciodesesionComponent {
