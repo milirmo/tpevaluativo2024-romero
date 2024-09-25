@@ -8,8 +8,8 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     /*para pantallas chicas (celular)*/
 
     mat-toolbar {
-        background-color: #61412d;
-        color: rgb(240, 233, 211);
+        background-color: #503b2f;
+        color: rgb(255, 255, 255);
     }
 
     /*oculta éstas secciones en caso de pantalla mayor a 700px*/
@@ -21,9 +21,17 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         display: none;
     }
 
-    .carrito{
-        margin-left: -50px;
+    .logo{
+        width: 40px;
+        border-radius: 200px;
+        margin-right: auto;
     }
+
+    .carrito{
+        margin-left: auto;
+    }
+
+    
 }
 
 @media(min-width: 700px) {
@@ -37,5 +45,15 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     /*oculta ésta sección en caso de pantalla menor a 700px*/
     #menuSecciones {
         display: none;
+    }
+
+    .logo{
+        width: 40px;
+        border-radius: 200px;
+        margin-right: auto;
+    }
+
+    .carrito{
+        margin-left: auto;
     }
 }

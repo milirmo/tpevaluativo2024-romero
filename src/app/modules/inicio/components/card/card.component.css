@@ -5,6 +5,7 @@
     gap: 20px; /* Espacio entre las tarjetas */
     justify-content: center; /* Centrar las tarjetas horizontalmente */
     margin-bottom: 3%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   /* Estilos para cada tarjeta individual */
@@ -32,11 +33,13 @@
   .card-title {
     font-size: 1.25rem; /* Tamaño del título */
     margin-bottom: 0.5rem; /* Margen inferior del título */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   .card-text {
     color: #666; /* Color de texto gris */
     margin-bottom: 0.5rem; /* Margen inferior del texto */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   .btn {
@@ -48,6 +51,10 @@
     text-decoration: none; /* Quitar subrayado del enlace */
     border-radius: 4px; /* Bordes redondeados */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  }
+
+  .btn:hover{
+    background-color: #442f21;
   }
   
   /* Estilos para hacer las tarjetas responsivas */

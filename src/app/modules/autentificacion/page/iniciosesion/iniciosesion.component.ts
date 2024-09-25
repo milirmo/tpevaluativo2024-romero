@@ -3,6 +3,7 @@ import { Usuario } from 'src/app/models/usuario'; //importamos la interfaz Usuar
 import { AuthService } from '../../services/auth.service'; //importamos servicio de autentificación
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service'; //importamos servicio de firestore
 import { Router } from '@angular/router'; //importamos componente de rutas de angular
+
 //importamos paquetería de alertas personalizadas
 import Swal from 'sweetalert2';
 
@@ -11,11 +12,11 @@ import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-iniciodesesion',
-  templateUrl: './iniciodesesion.component.html',
-  styleUrls: ['./iniciodesesion.component.css']
+  templateUrl: './iniciosesion.component.html',
+  styleUrls: ['./iniciosesion.component.css']
 })
 
-export class IniciodesesionComponent {
+export class IniciosesionComponent {
 
   hide = true;
 
@@ -87,7 +88,7 @@ export class IniciodesesionComponent {
         .then(res => {
           Swal.fire({
             title: "¡Binvenido/a de nuevo!",
-            text: "Inicio de sesión exitoso :)",
+            text: "Inicio de sesión exitoso.",
             icon: "success"
           });
 
@@ -96,7 +97,7 @@ export class IniciodesesionComponent {
         .catch(err => {
           Swal.fire({
             title: "Algo salió mal...",
-            text: "Hubo un error al intentar iniciar sesión.",
+            text: "Ocurrió un error al intentar iniciar sesión.",
             icon: "error"
           });
 

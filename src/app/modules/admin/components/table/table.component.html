@@ -36,13 +36,13 @@ td: renglones sin negrita
             <!--ACCIONES-->
             <td>
                 <!--boton editar-->
-                <button id="btn-edit" title="Editar" type="botton" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar">
-                    <mat-icon>Editar</mat-icon>
+                <button id="btn-edit" title="Editar" type="botton" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(producto)">
+                    <mat-icon>edit</mat-icon>
                 </button>
 
                 <!--boton eliminar-->
-                <button id="btn-delete" title="Eliminar" type="botton" class="btn btn-outline-danger" data-bs-target="#editarProducto" (click)="mostrarBorrar">
-                    <mat-icon>Eliminar</mat-icon>
+                <button id="btn-delete" title="Eliminar" type="botton" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
+                    <mat-icon>delete</mat-icon>
                 </button>
             </td>
 
@@ -52,7 +52,7 @@ td: renglones sin negrita
 
 
 <!-- BOTÓN AGREGAR NUEVOS PRODUCTOS -->
-<button type="button" class="btn outline-primary" data-bs-toggle="modal" data-bs-target="#AgregarProducto">Agregar nuevo producto</button>
+<button type="button" class="btn outline-primary botonAgregar" data-bs-toggle="modal" data-bs-target="#AgregarProducto">Agregar nuevo producto</button>
 
 
 <!-- MODAL PARA AGREGAR NUEVOS PRODUCTOS -->
@@ -62,7 +62,7 @@ td: renglones sin negrita
 
             <!--TÍTULO DEL MODAL-->
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo producto</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">¡Ingrese un nuevo producto!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -72,41 +72,39 @@ td: renglones sin negrita
             <div [formGroup]="producto" class="modal-body">
                 <!--nombre-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese nombre del libro:</label>
-                    <input class="form-control" type="text" formControlName="nombre" placeholder="Ej: HARRY POTTER 1">
+                    <label class="from-label">Ingrese nombre:</label>
+                    <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre del producto...">
                 </div>
                 <!-- precio -->
                 <div class="mb-3">
                     <label class="from-label">Ingrese precio:</label>
-                    <input class="form-control" type="number" formControlName="precio" placeholder="Ej: $1">
+                    <input class="form-control" type="number" formControlName="precio">
                 </div>
                 <!--categoría-->
                 <div class="mb-3">
-                    <label class="from-label">Seleccione género del producto:</label>
+                    <label class="from-label">Seleccione categoría del producto:</label>
                     <select class="form-control" formControlName="categoria">
                         <option selected>Elija una opción</option>
-                        <option value="drama">Drama</option>
-                        <option value="ciencia-ficcion">Ciencia Ficción</option>
+                        <option value="ciencia-ficcion">Ficción</option>
                         <option value="terror">Terror</option>
                         <option value="romance">Romance</option>
                         <option value="policial">Policial</option>
-                        <option value="teatral">Teatral</option>
                     </select>
                 </div>
                 <!--descripción-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese descripción del libro:</label>
-                    <input class="form-control" type="text" formControlName="descripcion" placeholder="Resumen del libro, sin detalles.">
+                    <label class="from-label">Ingrese descripción:</label>
+                    <input class="form-control" type="text" formControlName="descripcion" placeholder="Descripción del producto...">
                 </div>
                 <!--imagen-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese imagen del libro:</label>
-                    <input class="form-control" type="text" formControlName="imagen" placeholder="Link de imagen.">
+                    <label class="from-label">Ingrese una imagen ilustrativa:</label>
+                    <input class="form-control" type="text" formControlName="imagen" placeholder="Link de imagen...">
                 </div>
                 <!--alt de imagen-->
                 <div class="mb-3">
                     <label class="from-label">Ingrese texto alterntivo para la imagen del producto:</label>
-                    <input class="form-control" type="text" formControlName="alt" placeholder="Descripción de la imagen.">
+                    <input class="form-control" type="text" formControlName="alt" placeholder="Descripción de la imagen...">
                 </div>
             </div>
 
@@ -138,7 +136,7 @@ td: renglones sin negrita
             <div [formGroup]="producto" class="modal-body">
                 <!--nombre-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese nombre del libro:</label>
+                    <label class="from-label">Ingrese nombre:</label>
                     <input class="form-control" type="text" formControlName="nombre" placeholder="{{productoEdit.nombre}}">
                 </div>
                 <!-- precio -->
@@ -148,25 +146,25 @@ td: renglones sin negrita
                 </div>
                 <!--categoría-->
                 <div class="mb-3">
-                    <label class="from-label">Seleccione género del producto:</label>
+                    <label class="from-label">Seleccione categoría del producto:</label>
                     <select class="form-control" formControlName="categoria">
                         <option selected>Elija una opción</option>
-                        <option value="drama">Drama</option>
-                        <option value="ciencia-ficcion">Ciencia Ficción</option>
-                        <option value="terror">Terror</option>
-                        <option value="romance">Romance</option>
-                        <option value="policial">Policial</option>
-                        <option value="teatral">Teatral</option>
+                        <option value="drama">1</option>
+                        <option value="ciencia-ficcion">2</option>
+                        <option value="terror">3</option>
+                        <option value="romance">4</option>
+                        <option value="policial">5</option>
+                        <option value="teatral">6</option>
                     </select>
                 </div>
                 <!--descripción-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese descripción del libro:</label>
+                    <label class="from-label">Ingrese descripción:</label>
                     <input class="form-control" type="text" formControlName="descripcion" placeholder="{{productoEdit.descripcion}}">
                 </div>
                 <!--imagen-->
                 <div class="mb-3">
-                    <label class="from-label">Ingrese imagen del libro:</label>
+                    <label class="from-label">Ingrese imagen:</label>
                     <input class="form-control" type="text" formControlName="imagen" placeholder="{{productoEdit.imagen}}">
                 </div>
                 <!--alt de imagen-->

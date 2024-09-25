@@ -1,0 +1,40 @@
+.col-lg-12{
+    justify-content: center;
+    display: flex;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre tarjetas */
+  }
+  
+  .card {
+    width: 23%; /* Ajuste del ancho para que quepan 4 tarjetas por fila */
+    margin-bottom: 20px; /* Espacio inferior entre filas */
+  }
+  
+  .card img {
+    width: 100%; /* Imagen adaptada al ancho de la tarjeta */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+  
+  .card-body {
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+  }
+
+  
+  /* Ajuste para pantallas más pequeñas */
+  
+  @media (max-width: 992px) {
+    .card {
+      width: 48%; /* Mostrar 2 tarjetas por fila en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 100%; /* Mostrar 1 tarjeta por fila en pantallas pequeñas */
+    }
+  }

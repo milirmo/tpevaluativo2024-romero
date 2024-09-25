@@ -11,20 +11,26 @@ const routes: Routes = [
 
   //routeo modulo inicio
   {
-    path: 'inicio'
+    path: ''
     ,loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
   },
 
   //routeo modulo autentificacion
   {
-    path: 'autentificacion'
+    path: ''
     ,loadChildren: () => import('./modules/autentificacion/autentificacion.module').then(m => m.AutentificacionModule)
   },
 
   //routeo modulo producto
   {
-    path: 'producto'
+    path: ''
     ,loadChildren: () => import('./modules/producto/producto.module').then(m => m.ProductoModule)
+  },
+
+  //routeo modulo admin
+  {
+    path: ''
+    ,loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
 ];
 

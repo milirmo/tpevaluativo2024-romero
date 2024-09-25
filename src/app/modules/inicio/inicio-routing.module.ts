@@ -6,7 +6,7 @@ const routes: Routes = [
   
    //routeo componente inicio al inciar la página (mientras cargan modulos)
    {
-    path: '',component:InicioComponent
+    path: '', component: InicioComponent
   },
 
   //routeo para modulo inicio > componente inicio

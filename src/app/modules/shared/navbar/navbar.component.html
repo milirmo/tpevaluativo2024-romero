@@ -1,13 +1,14 @@
 <mat-toolbar>
 
-
   <!--CUANDO LA PANTALLA SEA MENOR A 700PX, SE MOSTRARÁ: -->
 
     <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
       <mat-icon>menú</mat-icon>
     </button>
   <mat-menu #seccion> <!--"#nombre" vincula con [matMenuTriggerFor]-->
-    <button mat-menu-item routerLink="inicio">Inicio</button>
+    <button mat-menu-item routerLink="inicio">
+      <mat-icon>home</mat-icon>
+    </button>
     <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
   </mat-menu>
 
@@ -15,20 +16,18 @@
 
   <!--CUANDO LA PANTALLA SEA MAYOR A 700px, SE MOSTRARÁ: -->
 
-    <!--carrito (próximamente)-->
-    <button mat-icon-button class="example-icon carrito" aria-label="Example icon-button with heart icon">
-      <mat-icon>shopping_cart</mat-icon>
-    </button>
-
+  <img class="logo" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
+  
     <!--boton para dirigirse a la página inicio (luego se debe importar en shared.module.ts) -->
-    <button mat-button routerLink="inicio">Inicio</button>
+    <button mat-button routerLink="inicio">
+      <mat-icon>home</mat-icon>
+    </button>
 
     <!--boton menu desplegable (para ir a los productos) -->
     <button mat-button [matMenuTriggerFor]="productos">Productos</button>
     <mat-menu #productos="matMenu">
       <button mat-menu-item routerLink="ofertas">Ofertas</button>
-    <button mat-menu-item routerLink="todos-los-productos">Libros & Más</button>
-    <button mat-menu-item routerLink="libros">Libros</button>
+    <button mat-menu-item routerLink="todos-los-productos">Libros</button>
     </mat-menu>
 
 
@@ -37,11 +36,17 @@
 
     <!--inicio de sesión y registro de un nuevo usuario -->
     <button mat-button [matMenuTriggerFor]="usuario">
-      <mat-icon>account_circle</mat-icon>
+      <mat-icon>person</mat-icon>
      </button>
-      <mat-menu #usuario="matMenu">
-     <button mat-menu-item routerLink="/registro">Registrarse</button>
-     <button mat-menu-item routerLink="/inicio-sesion">Iniciar sesión</button>
-     </mat-menu>
+     <mat-menu #usuario="matMenu">
+      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="registro">Registrarse</button>
+      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="inicio-sesion">Iniciar sesión</button>
+      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
+      </mat-menu>
+
+      <!--carrito (próximamente)-->
+    <button mat-icon-button class="example-icon carrito" aria-label="Example icon-button with heart icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
 
 </mat-toolbar>
