@@ -1,57 +1,3 @@
-<!--
-tr: columnas
-th: renglones en negrita
-td: renglones sin negrita
--->
-
-<!-- TABLA VISUAL PARA ADMIN -->
-<table class="table">
-    <thead> <!--ENCABEZADO DE TABLA-->
-
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Imagen</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Autor</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Acciones</th> <!--th para separar acciones del cuerpo de la tabla-->
-        </tr>
-
-    </thead>
-
-    <tbody> <!--CUERPO DE TABLA-->
-        <tr *ngFor="let producto of coleccionProductos">
-
-            <th scope="row"></th>
-
-            <td>
-                <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
-            </td>
-            <td>{{producto.nombre}}</td>
-            <td>${{producto.precio}}</td>
-            <td>{{producto.categoria}}</td>
-            <td>{{producto.autor}}</td>
-            <td>{{producto.descripcion}}</td>
-
-            <!--ACCIONES-->
-            <td>
-                <!--boton editar-->
-                <button id="btn-edit" title="Editar" type="botton" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(producto)">
-                    <mat-icon>edit</mat-icon>
-                </button>
-
-                <!--boton eliminar-->
-                <button id="btn-delete" title="Eliminar" type="botton" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </td>
-
-        </tr>
-    </tbody>
-</table>
-
 
 <!-- BOTÓN AGREGAR NUEVOS PRODUCTOS -->
 <button type="button" class="btn outline-primary botonAgregar" data-bs-toggle="modal" data-bs-target="#AgregarProducto">Agregar nuevo producto</button>
@@ -220,3 +166,61 @@ td: renglones sin negrita
             </div>
         </div>
     </div>
+
+
+
+
+<!-- TABLA VISUAL PARA ADMIN -->
+
+<!--
+tr: columnas
+th: renglones en negrita
+td: renglones sin negrita
+-->
+
+<table class="table">
+    <thead> <!--ENCABEZADO DE TABLA-->
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Acciones</th> <!--th para separar acciones del cuerpo de la tabla-->
+        </tr>
+
+    </thead>
+
+    <tbody> <!--CUERPO DE TABLA-->
+        <tr *ngFor="let producto of coleccionProductos">
+
+            <th scope="row"></th>
+
+            <td>
+                <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
+            </td>
+            <td>{{producto.nombre}}</td>
+            <td>${{producto.precio}}</td>
+            <td>{{producto.categoria}}</td>
+            <td>{{producto.autor}}</td>
+            <td>{{producto.descripcion}}</td>
+
+            <!--ACCIONES-->
+            <td>
+                <!--boton editar-->
+                <button id="btn-edit" title="Editar" type="botton" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(producto)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+
+                <!--boton eliminar-->
+                <button id="btn-delete" title="Eliminar" type="botton" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

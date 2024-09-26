@@ -40,20 +40,26 @@
   }
   
   /* Título de la tarjeta */
-  .card-title {
-    font-size: 1.25rem; /* Tamaño del título */
-    margin-bottom: 10px; /* Espacio debajo del título */
-    font-weight: bold; /* Hace el título más destacado */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  /* Texto del precio */
-  .card-text {
-    font-size: 1.5rem; /* Tamaño del texto del precio */
-    color: #2c3e50; /* Color oscuro */
-    margin-bottom: 15px; /* Espacio debajo del precio */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+.card-title {
+  font-size: 1.25rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  font-weight: bold; /* Hace el título más destacado */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: start;
+}
+
+/* Texto del precio */
+.card-text {
+  font-size: 1.5rem; /* Tamaño del texto del precio */
+  color: #2c3e50; /* Color oscuro */
+  margin-bottom: 15px; /* Espacio debajo del precio */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-autor{
+  text-align: start;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
   
   /* Botón dentro de la tarjeta */
   .btn {

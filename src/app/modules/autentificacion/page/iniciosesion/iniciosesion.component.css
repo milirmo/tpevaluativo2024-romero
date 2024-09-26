@@ -19,3 +19,8 @@ button{
     justify-content: center;
     margin-top: 15px;
 }
+
+.btn-guardar{
+    color: white;
+    background-color: #3d210a;
+}

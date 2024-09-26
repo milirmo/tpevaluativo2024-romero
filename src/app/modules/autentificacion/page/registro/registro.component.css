@@ -24,3 +24,8 @@ p{
 button{
     margin: 2%;
 }
+
+.btn-guardar{
+    color: white;
+    background-color: #3d210a;
+}

@@ -1,0 +1,11 @@
+/*ESTILO PARA EL TÍTULO*/
+.titulo{
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+    height: 40px;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

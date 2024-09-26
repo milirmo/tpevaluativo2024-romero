@@ -26,10 +26,11 @@
 }
 
 /* Imagen de la tarjeta */
-.card-img-top {
+.card-img {
   width: 90%; /* La imagen ocupa todo el ancho de la tarjeta */
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 0.8rem;
+  border-radius: 8px;
 }
 
 /* Cuerpo de la tarjeta */
@@ -44,6 +45,7 @@
   margin-bottom: 10px; /* Espacio debajo del título */
   font-weight: bold; /* Hace el título más destacado */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: start;
 }
 
 /* Texto del precio */
@@ -51,6 +53,11 @@
   font-size: 1.5rem; /* Tamaño del texto del precio */
   color: #2c3e50; /* Color oscuro */
   margin-bottom: 15px; /* Espacio debajo del precio */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-autor{
+  text-align: start;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -101,4 +108,34 @@
   .btn {
       padding: 8px 16px; /* Reduce el tamaño del botón en pantallas pequeñas */
   }
+}
+
+/*ESTILOS PARA EL MODAL*/
+
+.modal-body{
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.img-modal{
+  width: 50%; /* La imagen ocupa todo el ancho del modal */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 0.5rem;
+}
+
+.mb-descripcion .mb-precio{
+  margin: 1rem;
+}
+
+.mb-precio{
+  margin-top: 1rem;
+}
+
+/* Botón dentro de la tarjeta */
+.btn-modal {
+  background-color: #3d210a;
+  color: white;
+  padding: 10px 20px; /* Ajusta el relleno del botón */
+  border-radius: 40px; /* Botón con bordes redondeados */
+  text-align: center;
 }

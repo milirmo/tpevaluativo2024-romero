@@ -4,8 +4,9 @@
         <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
 
         <div class="card-body">
-            <h2 class="card-title">{{producto.nombre}}</h2>
-            <h4 class="card-text">$ {{producto.precio}}</h4>
+            <h3 class="card-title">{{producto.nombre}}</h3>
+            <h4 class="card-autor">{{producto.autor}}</h4>
+            <h1 class="card-text">$ {{producto.precio}}</h1>
 
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#verMas"
                 (click)="mostrarVer(producto)">Ver más</button>
