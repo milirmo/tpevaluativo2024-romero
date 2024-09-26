@@ -22,7 +22,7 @@
   }
   
   .card-img-top {
-    height: 500px; /* Altura fija para las imágenes */
+    height: 450px; /* Altura fija para las imágenes */
     object-fit: cover; /* Ajustar la imagen dentro del contenedor sin deformarla */
   }
   

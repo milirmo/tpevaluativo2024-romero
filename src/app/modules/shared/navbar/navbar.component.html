@@ -1,21 +1,5 @@
 <mat-toolbar>
 
-  <!--CUANDO LA PANTALLA SEA MENOR A 700PX, SE MOSTRARÁ: -->
-
-    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
-      <mat-icon>menú</mat-icon>
-    </button>
-  <mat-menu #seccion> <!--"#nombre" vincula con [matMenuTriggerFor]-->
-    <button mat-menu-item routerLink="inicio">
-      <mat-icon>home</mat-icon>
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
-  </mat-menu>
-
-
-
-  <!--CUANDO LA PANTALLA SEA MAYOR A 700px, SE MOSTRARÁ: -->
-
   <img class="logo" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
   
     <!--boton para dirigirse a la página inicio (luego se debe importar en shared.module.ts) -->
@@ -24,10 +8,13 @@
     </button>
 
     <!--boton menu desplegable (para ir a los productos) -->
-    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+    <button mat-button [matMenuTriggerFor]="productos">Ver libros</button>
     <mat-menu #productos="matMenu">
-      <button mat-menu-item routerLink="ofertas">Ofertas</button>
-    <button mat-menu-item routerLink="todos-los-productos">Libros</button>
+      <button mat-menu-item routerLink="todos-los-productos">Todos los géneros</button>
+      <button mat-menu-item routerLink="productos-ficcion">Ciencia Ficcion</button>
+      <button mat-menu-item routerLink="productos-policial">Policial</button>
+      <button mat-menu-item routerLink="productos-thriller">Thriller</button>
+      <button mat-menu-item routerLink="productos-romance">Romance</button>
     </mat-menu>
 
 

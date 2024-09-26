@@ -1,40 +1,104 @@
-.col-lg-12{
-    justify-content: center;
-    display: flex;
+/* Contenedor principal de las tarjetas */
+.container-tarjetas {
+  display: grid; /* Usamos Grid Layout */
+  grid-template-columns: repeat(4, 1fr); /* Creamos 4 columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px; /* Espaciado alrededor del contenedor */
+  justify-items: center; /* Centra horizontalmente las tarjetas en sus columnas */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.contenido {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Espacio entre tarjetas */
-  }
-  
-  .card {
-    width: 23%; /* Ajuste del ancho para que quepan 4 tarjetas por fila */
-    margin-bottom: 20px; /* Espacio inferior entre filas */
-  }
-  
-  .card img {
-    width: 100%; /* Imagen adaptada al ancho de la tarjeta */
-    height: auto; /* Mantener la proporción de la imagen */
-  }
-  
-  .card-body {
-    text-align: center; /* Centrar el texto dentro de la tarjeta */
+/* Estilos para las tarjetas */
+.card {
+  width: 100%; /* La tarjeta ocupa el 100% del espacio de la columna */
+  max-width: 18rem; /* Limita el ancho máximo de la tarjeta */
+  border: 1px solid #e0e0e0; /* Borde ligero */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar el mouse */
+  overflow: hidden; /* Oculta el contenido que excede del área */
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al hacer hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra en hover */
+}
+
+/* Imagen de la tarjeta */
+.card-img-top {
+  width: 90%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0.8rem;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 15px; /* Espaciado dentro del cuerpo de la tarjeta */
+  text-align: center; /* Centra el contenido del cuerpo */
+}
+
+/* Título de la tarjeta */
+.card-title {
+  font-size: 1.25rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  font-weight: bold; /* Hace el título más destacado */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Texto del precio */
+.card-text {
+  font-size: 1.5rem; /* Tamaño del texto del precio */
+  color: #2c3e50; /* Color oscuro */
+  margin-bottom: 15px; /* Espacio debajo del precio */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Botón dentro de la tarjeta */
+.btn {
+  background-color: #3d210a;
+  color: white;
+  padding: 10px 20px; /* Ajusta el relleno del botón */
+  border-radius: 40px; /* Botón con bordes redondeados */
+}
+
+/* Cambio de color del botón en hover */
+.btn:hover {
+  background-color: #502a0c; /* Cambia el color de fondo al hacer hover */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Responsivo: Pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .container-tarjetas {
+      grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
+      gap: 15px; /* Ajusta el espacio entre tarjetas */
   }
 
-  
-  /* Ajuste para pantallas más pequeñas */
-  
-  @media (max-width: 992px) {
-    .card {
-      width: 48%; /* Mostrar 2 tarjetas por fila en pantallas medianas */
-    }
+  .card {
+      max-width: 100%; /* La tarjeta ocupa el 100% del ancho disponible */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
-  
-  @media (max-width: 768px) {
-    .card {
-      width: 100%; /* Mostrar 1 tarjeta por fila en pantallas pequeñas */
-    }
+}
+
+/* Responsivo: Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .container-tarjetas {
+      grid-template-columns: repeat(1, 1fr); /* Solo una tarjeta por fila */
+      gap: 10px; /* Ajusta el espacio entre tarjetas */
   }
+
+  .card-title {
+      font-size: 1.1rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .card-text {
+      font-size: 1rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .btn {
+      padding: 8px 16px; /* Reduce el tamaño del botón en pantallas pequeñas */
+  }
+}

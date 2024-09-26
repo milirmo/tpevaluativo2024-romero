@@ -4,19 +4,38 @@ import { CommonModule } from '@angular/common';
 import { ProductoRoutingModule } from './producto-routing.module';
 import { TodosproductosComponent } from './page/todosproductos/todosproductos.component';
 import { CardComponent } from './components/card/card.component';
+import { FiccionComponent } from './page/ficcion/ficcion.component';
+import { RomanceComponent } from './page/romance/romance.component';
+import { PolicialComponent } from './page/policial/policial.component';
+import { CardFiccionComponent } from './components/card-ficcion/card-ficcion.component';
+import { CardPolicialComponent } from './components/card-policial/card-policial.component';
+import { CardRomanceComponent } from './components/card-romance/card-romance.component';
+import { CardThrillerComponent } from './components/card-thriller/card-thriller.component';
+import { ThrillerComponent } from './page/thriller/thriller.component';
 
 
 @NgModule({
   declarations: [
     TodosproductosComponent,
-    CardComponent
+    CardComponent,
+    FiccionComponent,
+    RomanceComponent,
+    PolicialComponent,
+    CardFiccionComponent,
+    CardPolicialComponent,
+    CardRomanceComponent,
+    CardThrillerComponent,
+    ThrillerComponent
   ],
   imports: [
     CommonModule,
     ProductoRoutingModule
   ],
   exports: [
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    CardFiccionComponent,
+    CardPolicialComponent,
+    CardRomanceComponent
   ]
 })
 export class ProductoModule { }
