@@ -1,11 +1,5 @@
-table{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-td,th,tr{
-    background-color: rgb(250, 246, 240);
-}
-
+/*ESTILOS PARA BOTON AGREGAR NUEVO PRODUCTO*/
 .botonAgregar{
     background-color: #503524;
     color: rgb(255, 255, 244);
@@ -13,4 +7,144 @@ td,th,tr{
     font-size: large;
     border-radius: 20px;
     margin-bottom: 50px;
+}
+
+/*ESTILOS PARA LA TABLA*/
+/* Estilo general de la tabla */
+.table {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%; /* Tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    margin: 20px 0; /* Espaciado alrededor de la tabla */
+    font-size: 1rem; /* Tamaño de la fuente para mejor legibilidad */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Encabezado de la tabla */
+.table thead th {
+    background-color: #f8f9fa; /* Fondo gris claro para el encabezado */
+    padding: 12px; /* Espaciado dentro de las celdas del encabezado */
+    border-bottom: 2px solid #dee2e6; /* Borde inferior para separar el encabezado del cuerpo */
+    font-weight: bold; /* Negrita para diferenciar el encabezado */
+}
+
+/* Celdas del cuerpo de la tabla */
+.table tbody td, 
+.table tbody th {
+    padding: 10px; /* Espaciado dentro de las celdas */
+    border-bottom: 1px solid #dee2e6; /* Borde inferior entre las filas */
+    vertical-align: middle; /* Alinea el contenido verticalmente en el centro */
+}
+
+/* Estilo de las imágenes dentro de la tabla */
+.table tbody img {
+    max-width: 100px; /* Ancho máximo de las imágenes */
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    object-fit: cover; /* Ajusta la imagen dentro del espacio disponible */
+}
+
+/* Estilo de los botones de acción (editar y eliminar) */
+#btn-edit, #btn-delete {
+    margin-right: 5px; /* Espaciado entre los botones */
+    padding: 6px 10px; /* Ajusta el tamaño del botón */
+    font-size: 0.9rem; /* Tamaño de texto reducido para los botones */
+    display: inline-flex; /* Asegura que el contenido dentro del botón esté alineado */
+    align-items: center; /* Centra el icono verticalmente */
+}
+
+/* Iconos dentro de los botones */
+#btn-edit mat-icon, #btn-delete mat-icon {
+    font-size: 1.2rem; /* Tamaño del icono */
+}
+
+/* Botón de edición */
+#btn-edit {
+    color: #6c757d; /* Color gris para el botón de edición */
+    border-color: #6c757d; /* Borde gris */
+}
+
+/* Botón de eliminar */
+#btn-delete {
+    color: #dc3545; /* Color rojo para el botón de eliminar */
+    border-color: #dc3545; /* Borde rojo */
+}
+
+#btn-edit:hover{
+    color: #f8f9fa;
+}
+
+#btn-delete:hover{
+    color: #f8f9fa;
+}
+
+/* Responsividad: para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .table thead {
+        display: none; /* Oculta el encabezado en pantallas pequeñas */
+    }
+
+    /* Filas del cuerpo de la tabla en pantallas pequeñas */
+    .table tbody tr {
+        display: block; /* Cada fila es un bloque */
+        margin-bottom: 15px; /* Espacio entre filas */
+        border-bottom: 2px solid #dee2e6; /* Borde inferior para separar los productos */
+        padding: 10px 0; /* Espaciado extra */
+    }
+
+    /* Cada celda del cuerpo se mostrará como un bloque */
+    .table tbody td {
+        display: flex; /* Cada celda será un contenedor flexible */
+        justify-content: space-between; /* Alinea el contenido entre los extremos */
+        padding: 10px; /* Espaciado dentro de las celdas */
+        text-align: right; /* Alinea el texto a la derecha para mejorar legibilidad */
+    }
+
+    /* Títulos de los campos en pantallas pequeñas */
+    .table tbody td:before {
+        content: attr(data-label); /* Usa el atributo data-label para generar títulos */
+        font-weight: bold; /* Títulos en negrita */
+        text-transform: uppercase; /* Los títulos en mayúsculas */
+        color: #6c757d; /* Color gris para los títulos */
+        margin-right: 10px; /* Espacio entre el título y el contenido */
+        flex-basis: 40%; /* Los títulos ocupan el 40% del ancho */
+        text-align: left; /* Alinea los títulos a la izquierda */
+    }
+
+    /* Los botones en pantallas pequeñas se agrandan para ser más accesibles */
+    #btn-edit, #btn-delete {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    /* Ajusta las imágenes en pantallas pequeñas */
+    .table tbody img {
+        max-width: 80px; /* Reduce el tamaño máximo de las imágenes */
+    }
+}
+
+/* Responsividad: para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    /* Mayor espaciado y ajuste de contenido en móviles */
+    .table tbody td {
+        flex-direction: column; /* Cada celda se organiza en una columna */
+        text-align: left; /* Alinea el contenido a la izquierda */
+    }
+
+    .table tbody td:before {
+        margin-bottom: 5px; /* Espaciado extra entre título y contenido */
+    }
+
+    /* Botones más grandes y visibles en móviles */
+    #btn-edit, #btn-delete {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin-bottom: 10px; /* Espaciado inferior entre botones */
+    }
+}
+
+
+/*ESTILOS PARA EL MODAL*/
+.img-modal{
+    width: 50%;
+    height: auto;
 }

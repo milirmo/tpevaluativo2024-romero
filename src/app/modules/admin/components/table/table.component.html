@@ -14,6 +14,7 @@ td: renglones sin negrita
             <th scope="col">Nombre</th>
             <th scope="col">Precio</th>
             <th scope="col">Categoria</th>
+            <th scope="col">Autor</th>
             <th scope="col">Descripción</th>
             <th scope="col">Acciones</th> <!--th para separar acciones del cuerpo de la tabla-->
         </tr>
@@ -23,14 +24,15 @@ td: renglones sin negrita
     <tbody> <!--CUERPO DE TABLA-->
         <tr *ngFor="let producto of coleccionProductos">
 
-            <th scope="row">1</th>
+            <th scope="row"></th>
 
             <td>
                 <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
             </td>
             <td>{{producto.nombre}}</td>
-            <td>{{producto.precio}}</td>
+            <td>${{producto.precio}}</td>
             <td>{{producto.categoria}}</td>
+            <td>{{producto.autor}}</td>
             <td>{{producto.descripcion}}</td>
 
             <!--ACCIONES-->
@@ -62,7 +64,7 @@ td: renglones sin negrita
 
             <!--TÍTULO DEL MODAL-->
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">¡Ingrese un nuevo producto!</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo producto</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -90,6 +92,11 @@ td: renglones sin negrita
                         <option value="romance">Romance</option>
                         <option value="policial">Policial</option>
                     </select>
+                </div>
+                <!-- autor -->
+                <div class="mb-3">
+                    <label class="from-label">Ingrese autor:</label>
+                    <input class="form-control" type="text" formControlName="autor" placeholder="Autor/a del libro...">
                 </div>
                 <!--descripción-->
                 <div class="mb-3">
@@ -126,7 +133,7 @@ td: renglones sin negrita
 
             <!--TÍTULO DEL MODAL-->
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Edite el siguiente producto</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -154,6 +161,11 @@ td: renglones sin negrita
                         <option value="romance">Romance</option>
                         <option value="policial">Policial</option>
                     </select>
+                </div>
+                <!-- autor -->
+                <div class="mb-3">
+                    <label class="from-label">Ingrese autor:</label>
+                    <input class="form-control" type="text" formControlName="autor" placeholder="{{productoEdit.autor}}">
                 </div>
                 <!--descripción-->
                 <div class="mb-3">
@@ -190,14 +202,14 @@ td: renglones sin negrita
             <div class="modal-content">
                 <!-- ENCABEZADO -->
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro de eliminar el producto?</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Desea eliminar el producto?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
     
                 <!-- CUERPO DE MODAL -->
                 <div class="modal-body">
                     {{productoSeleccionado.nombre}}
-                    <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
+                    <img class="img-modal" src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
                 </div>
     
                 <!-- ACCIONES -->

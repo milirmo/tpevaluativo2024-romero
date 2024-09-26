@@ -27,6 +27,7 @@ export class TableComponent {
   producto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
+    autor: new FormControl('', Validators.required),
     descripcion: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
     imagen: new FormControl('', Validators.required),
@@ -46,6 +47,7 @@ export class TableComponent {
         idProducto: '',
         nombre: this.producto.value.nombre!,
         precio: this.producto.value.precio!,
+        autor: this.producto.value.autor!,
         descripcion: this.producto.value.descripcion!,
         categoria: this.producto.value.categoria!,
         imagen: this.producto.value.imagen!,
@@ -61,7 +63,7 @@ export class TableComponent {
           });
 
           //resetea el formulario y queda vacío
-          this.producto.reset
+          this.producto.reset()
         })
 
         .catch(error => {
@@ -72,7 +74,7 @@ export class TableComponent {
             icon: "error"
           });
 
-          this.producto.reset
+          this.producto.reset()
         })
     }
   }
@@ -111,6 +113,7 @@ export class TableComponent {
     this.producto.setValue({
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
+      autor: productoSeleccionado.autor,
       descripcion: productoSeleccionado.descripcion,
       categoria: productoSeleccionado.categoria,
       imagen: productoSeleccionado.imagen,
@@ -126,6 +129,7 @@ export class TableComponent {
       //Los demás atributos reciben nueva información desde el formulario
       nombre: this.producto.value.nombre!,
       precio: this.producto.value.precio!,
+      autor: this.producto.value.autor!,
       descripcion: this.producto.value.descripcion!,
       categoria: this.producto.value.categoria!,
       imagen: this.producto.value.imagen!,
