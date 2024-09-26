@@ -1,3 +1,9 @@
+/*estilo para dar sombreado al ícono person*/
+.material-icons {
+    font-size: 200px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 .iniciosesion{
     width: 500px;
     text-align: center;
