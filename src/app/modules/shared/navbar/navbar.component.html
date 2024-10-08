@@ -8,7 +8,7 @@
     </button>
 
     <!--boton menu desplegable (para ir a los productos) -->
-    <button mat-button [matMenuTriggerFor]="productos">Ver libros</button>
+    <button class="boton-productos" mat-button [matMenuTriggerFor]="productos">Ver libros</button>
     <mat-menu #productos="matMenu">
       <button mat-menu-item routerLink="todos-los-productos">Todos los géneros</button>
       <button mat-menu-item routerLink="productos-ficcion">Ciencia Ficcion</button>

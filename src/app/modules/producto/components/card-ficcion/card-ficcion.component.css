@@ -17,6 +17,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar el mouse */
     overflow: hidden; /* Oculta el contenido que excede del área */
+    margin-bottom: 15px;
   }
   
   /* Efecto hover para la tarjeta */

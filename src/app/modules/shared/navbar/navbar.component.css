@@ -20,10 +20,20 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         display: none;
     }
 
+    .boton-productos {
+        background-color: #3a2b20;
+        border-radius: 15px;
+    }
+
+    .boton-productos:hover {
+        background-color: #4d3428;
+    }
+
     .logo {
         width: 40px;
         border-radius: 200px;
         margin-right: auto;
+
     }
 
     .carrito {
@@ -73,6 +83,14 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         }
     }
 
+    .boton-productos {
+        background-color: #3a2b20;
+        border-radius: 15px;
+    }
+
+    .boton-productos:hover {
+        background-color: #4d3428;
+    }
 
     .carrito {
         margin-left: auto;
