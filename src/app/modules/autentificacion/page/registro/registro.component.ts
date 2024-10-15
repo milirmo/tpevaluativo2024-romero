@@ -36,7 +36,7 @@ export class RegistroComponent {
     apellido: '',
     edad: 0,
     email: '',
-    rol: '',
+    rol: 'visitante', // -> al registrarse, todos los usuarios serán "visitante"
     password: ''
   }
 
@@ -67,7 +67,7 @@ export class RegistroComponent {
       //el metodo CATCH captura una falla y devuelve un error cuando la promesa salga mal
       .catch(error => {
         Swal.fire({
-          title: "Algo salió mal...",
+          title: "Error al registrarse...",
           text: "Hubo un error al intentar registrar usuario: \n" + error, // "\n"+error)" para mostrar el error ocurrido
           icon: "error"
         });
@@ -112,7 +112,7 @@ export class RegistroComponent {
       nombre: this.usuarios.nombre = '',
       apellido: this.usuarios.apellido = '',
       email: this.usuarios.email = '',
-      rol: this.usuarios.rol = '',
+      rol: this.usuarios.rol = 'visitante',
       password: this.usuarios.password = ''
     }
   }

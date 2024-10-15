@@ -5,11 +5,22 @@
     <div class="card" style="width: 18rem;" *ngFor="let tarjeta of tarjetas">
         <img src="{{tarjeta.img}}" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">{{tarjeta.titulo}}</h5>
-          <h5 class="card-title">$ {{tarjeta.precio}}</h5>
-          <p class="card-text">{{tarjeta.genero}}</p>
-          <p class="card-text">{{tarjeta.autor}}</p>
+
+          <div class="contenedor">
+
+            <h3 class="card-title">
+              <b>{{tarjeta.titulo}}</b>
+            </h3>
+  
+            <p class="card-text">{{tarjeta.genero}}</p>
+            <p class="card-text">{{tarjeta.autor}}</p>
+            
+          </div>
+        
+          <h3 class="card-title card-precio">$ {{tarjeta.precio}}</h3>
+
           <a routerLink="/todos-los-productos" class="btn">Ver más</a>
+
         </div>
       </div>
 

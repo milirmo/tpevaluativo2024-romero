@@ -92,12 +92,26 @@ export class IniciosesionComponent {
             icon: "success"
           });
 
-          this.servicioRutas.navigate(['/inicio']);
+          //almacenamos y enviamos por parámetro el rol de los datos de usuario obtenido
+          this.servicioAuth.setUsuarioRol(usuarioData.rol);
+
+          if(usuarioData.rol === "admin"){
+
+            console.log("inicio de administrador"); //mensaje de inicio de administrador
+            this.servicioRutas.navigate(['/admin']); //redirige a la vista administracion.
+
+          } else{
+
+            console.log("inicio de visitante"); //mensaje de inicio de visitante
+            this.servicioRutas.navigate(['/inicio']); //redirige a la vista inicio.
+
+          }
         })
+        
         .catch(err => {
           Swal.fire({
-            title: "Algo salió mal...",
-            text: "Ocurrió un error al intentar iniciar sesión.",
+            title: "Error al iniciar sesión...",
+            text: "Hubo un error al intentar registrar usuario.",
             icon: "error"
           });
 

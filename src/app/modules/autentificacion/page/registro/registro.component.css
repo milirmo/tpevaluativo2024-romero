@@ -1,37 +1,100 @@
-/*estilo para dar sombreado al ícono person*/
+/* Contenedor principal para la sección de registro */
+.container.registro {
+    max-width: 500px; /* Ancho máximo del contenedor */
+    margin: 50px auto; /* Centra el contenedor horizontalmente y le da margen superior */
+    padding: 20px; /* Padding interno para espaciar el contenido */
+    background-color: white; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Alineación centrada para todo el contenido */
+}
+
+/* Estilos del ícono de usuario */
 .material-icons {
-    font-size: 200px;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 150px; /* Tamaño del ícono */
+    color: #362117; /* Color azul para el ícono */
+    margin-bottom: 20px; /* Espacio inferior para separar el ícono del formulario */
 }
 
-.container{
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
+/* Estilos de los campos de texto (mat-form-field) */
+.mat-form-field {
+    width: 100%; /* Asegura que el mat-form-field ocupe todo el ancho disponible */
 }
 
-.registro{
-    width: 500px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+input[matInput] {
+    width: 100%; /* Asegura que los inputs ocupen el 100% del ancho del campo */
+    padding: 10px; /* Padding interno del campo de texto */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
 }
 
-mat-form-field{
-    width: 500px;
+/* Estilo del botón de registro */
+.btn-guardar {
+    width: 100%; /* El botón ocupará todo el ancho disponible */
+    padding: 10px; /* Padding interno para aumentar el tamaño del botón */
+    background-color: #362117; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 14px; /* Tamaño del texto */
+    border: none; /* Elimina bordes predeterminados */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
 }
 
-p{
-    width: 500px;
-    text-align: center;
+/* Efecto hover para el botón cuando se pasa el cursor */
+.btn-guardar:hover {
+    background-color: #412f27; /* Color de fondo más claro al hacer hover */
 }
 
-button{
-    margin: 2%;
+
+
+/* Media query para pantallas pequeñas (teléfonos, menos de 600px) */
+@media (max-width: 600px) {
+    .container.registro {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        margin: 30px auto; /* Reduce el margen superior en pantallas pequeñas */
+    }
+
+    .material-icons {
+        font-size: 120px; /* Reduce el tamaño del ícono para pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 15px; /* Reduce el tamaño del título */
+    }
+
+    .btn-guardar {
+        font-size: 14px; /* Reduce el tamaño del texto del botón */
+        padding: 8px; /* Reduce el padding del botón */
+    }
 }
 
-.btn-guardar{
-    color: white;
-    background-color: #3d210a;
+/* Media query para pantallas medianas (tablets, menos de 768px) */
+@media (max-width: 768px) {
+    .container.registro {
+        padding: 20px; /* Mantiene el padding en pantallas medianas */
+        max-width: 90%; /* El contenedor ocupará el 90% del ancho disponible */
+    }
+
+    .material-icons {
+        font-size: 130px; /* Ajusta el tamaño del ícono */
+    }
+
+    .btn-guardar {
+        font-size: 14px; /* Ajusta el tamaño del texto del botón */
+    }
+}
+
+/* Media query para pantallas grandes (PC, más de 1024px) */
+@media (min-width: 1024px) {
+    .container.registro {
+        max-width: 600px; /* Aumenta el ancho máximo del contenedor en pantallas grandes */
+    }
+
+    .material-icons {
+        font-size: 180px; /* Aumenta el tamaño del ícono */
+    }
+
+    .btn-guardar {
+        font-size: 15px; /* Aumenta el tamaño del texto del botón */
+        padding: 12px; /* Aumenta el padding del botón */
+    }
 }

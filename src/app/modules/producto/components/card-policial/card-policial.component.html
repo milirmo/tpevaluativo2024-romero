@@ -1,15 +1,21 @@
 <!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
 <div class="container-tarjetas">
     <div class="card" style="width: 18rem;" *ngFor="let producto of coleccionPoliciales">
-        <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
+        <img src="{{producto.imagen}}" class="card-img" alt="{{producto.alt}}">
 
         <div class="card-body">
-            <h3 class="card-title">{{producto.nombre}}</h3>
-            <h4 class="card-autor">{{producto.autor}}</h4>
-            <h1 class="card-text">$ {{producto.precio}}</h1>
+            <div class="contenedor">
+                <h3 class="card-title">
+                    <b>{{producto.nombre}}</b>
+                </h3>
+    
+                <p class="card-autor">{{producto.autor}}</p>
+            </div>
+            
+            <p class="card-precio">$ {{producto.precio}}</p>
 
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#verMas"
-                (click)="mostrarVer(producto)">Ver más</button>
+            (click)="mostrarVer(producto)">Ver más</button>
         </div>
     </div>
 </div>
@@ -27,7 +33,7 @@
                 <img class="img-modal" src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
 
                 <div class="mb-precio">
-                  <h1> $ {{productoSeleccionado.precio}} </h1>
+                  $ {{productoSeleccionado.precio}}
                 </div>
 
                 <div class="mb-descripcion">
@@ -37,8 +43,8 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn-modal" data-bs-dismiss="modal">Agregar al carrito</button>
-                <button type="button" class="btn-modal" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn" data-bs-dismiss="modal">Agregar al carrito</button>
+                <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

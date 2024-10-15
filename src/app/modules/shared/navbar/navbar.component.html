@@ -1,9 +1,10 @@
 <mat-toolbar>
 
-  <img class="logo" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
+    <img class="logo-inicio" routerLink="/inicio" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
+
   
     <!--boton para dirigirse a la página inicio (luego se debe importar en shared.module.ts) -->
-    <button mat-button routerLink="inicio">
+    <button mat-icon-button routerLink="inicio">
       <mat-icon>home</mat-icon>
     </button>
 
@@ -17,12 +18,14 @@
       <button mat-menu-item routerLink="productos-romance">Romance</button>
     </mat-menu>
 
+    <!--boton ruta administración-->
+    <button id="menuAdmin" mat-button routerLink="admin">Admin</button>
 
     <span class="example-spacer"></span>
 
 
     <!--inicio de sesión y registro de un nuevo usuario -->
-    <button mat-button [matMenuTriggerFor]="usuario">
+    <button mat-icon-button [matMenuTriggerFor]="usuario">
       <mat-icon>person</mat-icon>
      </button>
      <mat-menu #usuario="matMenu">

@@ -32,6 +32,18 @@ const routes: Routes = [
     path: ''
     ,loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
+
+  //routeo modulo acerca de / sobre nosotros
+  {
+    path: ''
+    ,loadChildren: () => import('./modules/sobrenosotros/sobrenosotros.module').then(m => m.SobrenosotrosModule)
+  },
+
+  //routeo modulo preguntas frecuentes (faqs)
+  {
+    path: ''
+    ,loadChildren: () => import('./modules/faqs/faqs.module').then(m => m.FaqsModule)
+  },
 ];
 
 @NgModule({

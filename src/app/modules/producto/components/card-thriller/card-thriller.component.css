@@ -27,11 +27,10 @@
 }
 
 /* Imagen de la tarjeta */
-.card-img-top {
-  width: 90%; /* La imagen ocupa todo el ancho de la tarjeta */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin: 0.8rem;
-  border-radius: 0.7rem;
+.card-img {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 430px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajustar la imagen dentro del contenedor sin deformarla */
 }
 
 /* Cuerpo de la tarjeta */
@@ -42,42 +41,50 @@
 
 /* Título de la tarjeta */
 .card-title {
-font-size: 1.25rem; /* Tamaño del título */
-margin-bottom: 10px; /* Espacio debajo del título */
-font-weight: bold; /* Hace el título más destacado */
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-text-align: start;
-}
-
-/* Texto del precio */
-.card-text {
-font-size: 1.5rem; /* Tamaño del texto del precio */
-color: #2c3e50; /* Color oscuro */
-margin-bottom: 15px; /* Espacio debajo del precio */
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.25rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  font-weight: bold; /* Hace el título más destacado */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: start;
 }
 
 .card-autor{
-text-align: start;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #666;
+  text-align: start;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-precio{
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 20px;
 }
 
 /* Botón dentro de la tarjeta */
 .btn {
-  background-color: #3d210a;
+  cursor: pointer;
+  background-color: #83736b;
   color: white;
   padding: 10px 20px; /* Ajusta el relleno del botón */
   border-radius: 40px; /* Botón con bordes redondeados */
+  margin-bottom: 10px;
 }
 
 /* Cambio de color del botón en hover */
 .btn:hover {
-  background-color: #502a0c; /* Cambia el color de fondo al hacer hover */
+  background-color: #746761; /* Cambia el color de fondo al hacer hover */
   color: white; /* Cambia el color del texto a blanco */
 }
 
-/* Responsivo: Pantallas medianas (hasta 1024px) */
+.contenedor{
+  height: 80px;
+}
+
+/* Responsivo: Pantallas grandes (hasta 1024px) */
 @media (max-width: 1024px) {
+
   .container-tarjetas {
       grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
       gap: 15px; /* Ajusta el espacio entre tarjetas */
@@ -112,38 +119,45 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
+
 /*ESTILOS PARA EL MODAL*/
 
 .modal-body{
   text-align: center;
   margin: 0.5rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.modal-title{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .img-modal{
-  width: 50%; /* La imagen ocupa todo el ancho del modal */
+  width: 50%; /* imagen ocupa 50% ancho del modal */
   height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 0.7rem;
-}
-
-.mb-descripcion .mb-precio{
-  margin: 1rem;
+  border-radius: 0.5rem;
 }
 
 .mb-precio{
-  margin-top: 1rem;
+  font-size: 2rem;
+  margin: 2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Botón dentro de la tarjeta */
-.btn-modal {
-  background-color: #3d210a;
+/* Botón dentro del modal */
+.btn {
+  background-color: #83736b;
   color: white;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
   padding: 10px 20px; /* Ajusta el relleno del botón */
+  margin-bottom: 10px;
   border-radius: 40px; /* Botón con bordes redondeados */
-  text-align: center;
 }
 
 /* Cambio de color del botón en hover */
-.btn-modal:hover {
-  background-color: #502a0c; /* Cambia el color de fondo al hacer hover */
+.btn:hover {
+  background-color: #746761; /* Cambia el color de fondo al hacer hover */
   color: white; /* Cambia el color del texto a blanco */
 }

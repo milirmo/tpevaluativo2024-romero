@@ -1,46 +1,45 @@
 /* Contenedor principal de las tarjetas */
 .container-tarjetas {
-    display: grid; /* Usamos Grid Layout */
-    grid-template-columns: repeat(4, 1fr); /* Creamos 4 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las tarjetas */
-    padding: 20px; /* Espaciado alrededor del contenedor */
-    justify-items: center; /* Centra horizontalmente las tarjetas en sus columnas */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  /* Estilos para las tarjetas */
-  .card {
-    width: 100%; /* La tarjeta ocupa el 100% del espacio de la columna */
-    max-width: 18rem; /* Limita el ancho máximo de la tarjeta */
-    border: 1px solid #e0e0e0; /* Borde ligero */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar el mouse */
-    overflow: hidden; /* Oculta el contenido que excede del área */
-    margin-bottom: 15px;
-  }
-  
-  /* Efecto hover para la tarjeta */
-  .card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al hacer hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra en hover */
-  }
-  
-  /* Imagen de la tarjeta */
-  .card-img-top {
-    width: 90%; /* La imagen ocupa todo el ancho de la tarjeta */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0.8rem;
-    border-radius: 0.7rem;
-  }
-  
-  /* Cuerpo de la tarjeta */
-  .card-body {
-    padding: 15px; /* Espaciado dentro del cuerpo de la tarjeta */
-    text-align: center; /* Centra el contenido del cuerpo */
-  }
-  
-  /* Título de la tarjeta */
+  display: grid; /* Usamos Grid Layout */
+  grid-template-columns: repeat(4, 1fr); /* Creamos 4 columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px; /* Espaciado alrededor del contenedor */
+  justify-items: center; /* Centra horizontalmente las tarjetas en sus columnas */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  width: 100%; /* La tarjeta ocupa el 100% del espacio de la columna */
+  max-width: 18rem; /* Limita el ancho máximo de la tarjeta */
+  border: 1px solid #e0e0e0; /* Borde ligero */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave al pasar el mouse */
+  overflow: hidden; /* Oculta el contenido que excede del área */
+  margin-bottom: 15px;
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al hacer hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra en hover */
+}
+
+/* Imagen de la tarjeta */
+.card-img {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 430px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajustar la imagen dentro del contenedor sin deformarla */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 15px; /* Espaciado dentro del cuerpo de la tarjeta */
+  text-align: center; /* Centra el contenido del cuerpo */
+}
+
+/* Título de la tarjeta */
 .card-title {
   font-size: 1.25rem; /* Tamaño del título */
   margin-bottom: 10px; /* Espacio debajo del título */
@@ -49,101 +48,117 @@
   text-align: start;
 }
 
-/* Texto del precio */
-.card-text {
-  font-size: 1.5rem; /* Tamaño del texto del precio */
-  color: #2c3e50; /* Color oscuro */
-  margin-bottom: 15px; /* Espacio debajo del precio */
+.card-autor{
+  color: #666;
+  text-align: start;
+  font-size: 1rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.card-autor{
-  text-align: start;
+.card-precio{
+  text-align: center;
+  font-size: 1.5rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 20px;
 }
-  
-  /* Botón dentro de la tarjeta */
+
+/* Botón dentro de la tarjeta */
+.btn {
+  cursor: pointer;
+  background-color: #83736b;
+  color: white;
+  padding: 10px 20px; /* Ajusta el relleno del botón */
+  border-radius: 40px; /* Botón con bordes redondeados */
+  margin-bottom: 10px;
+}
+
+/* Cambio de color del botón en hover */
+.btn:hover {
+  background-color: #746761; /* Cambia el color de fondo al hacer hover */
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+.contenedor{
+  height: 80px;
+}
+
+/* Responsivo: Pantallas grandes (hasta 1024px) */
+@media (max-width: 1024px) {
+
+  .container-tarjetas {
+      grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
+      gap: 15px; /* Ajusta el espacio entre tarjetas */
+  }
+
+  .card {
+      max-width: 100%; /* La tarjeta ocupa el 100% del ancho disponible */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+}
+
+/* Responsivo: Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .container-tarjetas {
+      grid-template-columns: repeat(1, 1fr); /* Solo una tarjeta por fila */
+      gap: 10px; /* Ajusta el espacio entre tarjetas */
+  }
+
+  .card-title {
+      font-size: 1.1rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .card-text {
+      font-size: 1rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
   .btn {
-    background-color: #3d210a;
-    color: white;
-    padding: 10px 20px; /* Ajusta el relleno del botón */
-    border-radius: 40px; /* Botón con bordes redondeados */
+      padding: 8px 16px; /* Reduce el tamaño del botón en pantallas pequeñas */
   }
-  
-  /* Cambio de color del botón en hover */
-  .btn:hover {
-    background-color: #502a0c; /* Cambia el color de fondo al hacer hover */
-    color: white; /* Cambia el color del texto a blanco */
-  }
-  
-  /* Responsivo: Pantallas medianas (hasta 1024px) */
-  @media (max-width: 1024px) {
-    .container-tarjetas {
-        grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
-        gap: 15px; /* Ajusta el espacio entre tarjetas */
-    }
-  
-    .card {
-        max-width: 100%; /* La tarjeta ocupa el 100% del ancho disponible */
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  }
-  
-  /* Responsivo: Pantallas pequeñas (hasta 768px) */
-  @media (max-width: 768px) {
-    .container-tarjetas {
-        grid-template-columns: repeat(1, 1fr); /* Solo una tarjeta por fila */
-        gap: 10px; /* Ajusta el espacio entre tarjetas */
-    }
-  
-    .card-title {
-        font-size: 1.1rem; /* Ajusta el tamaño del título en pantallas pequeñas */
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .card-text {
-        font-size: 1rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .btn {
-        padding: 8px 16px; /* Reduce el tamaño del botón en pantallas pequeñas */
-    }
-  }
+}
+
 
 
 /*ESTILOS PARA EL MODAL*/
 
 .modal-body{
-    text-align: center;
-    margin: 0.5rem;
+  text-align: center;
+  margin: 0.5rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.modal-title{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .img-modal{
-    width: 50%; /* La imagen ocupa todo el ancho del modal */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 0.7rem;
-}
-
-.mb-descripcion .mb-precio{
-    margin: 1rem;
+  width: 50%; /* imagen ocupa 50% ancho del modal */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 0.5rem;
 }
 
 .mb-precio{
-    margin-top: 1rem;
+  font-size: 2rem;
+  margin: 2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Botón dentro de la tarjeta */
-.btn-modal {
-    background-color: #3d210a;
-    color: white;
-    padding: 10px 20px; /* Ajusta el relleno del botón */
-    border-radius: 40px; /* Botón con bordes redondeados */
-    text-align: center;
-  }
-  
-  /* Cambio de color del botón en hover */
-  .btn-modal:hover {
-    background-color: #502a0c; /* Cambia el color de fondo al hacer hover */
-    color: white; /* Cambia el color del texto a blanco */
-  }
+/* Botón dentro del modal */
+.btn {
+  background-color: #83736b;
+  color: white;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  padding: 10px 20px; /* Ajusta el relleno del botón */
+  margin-bottom: 10px;
+  border-radius: 40px; /* Botón con bordes redondeados */
+}
+
+/* Cambio de color del botón en hover */
+.btn:hover {
+  background-color: #746761; /* Cambia el color de fondo al hacer hover */
+  color: white; /* Cambia el color del texto a blanco */
+}
+

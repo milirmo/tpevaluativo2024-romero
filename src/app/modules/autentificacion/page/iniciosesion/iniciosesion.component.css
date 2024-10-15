@@ -1,32 +1,116 @@
-/*estilo para dar sombreado al ícono person*/
+
+/* Estilo del contenedor principal de la sección de inicio de sesión */
+.container.iniciosesion {
+    max-width: 400px; /* Define un ancho máximo de 400px */
+    margin: 50px auto; /* Centra el contenedor horizontalmente y le da un margen superior de 50px */
+    padding: 20px; /* Añade un padding interno de 20px */
+    text-align: center; /* Alinea todo el contenido del contenedor al centro */
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor del contenedor */
+}
+
+/* Estilo del encabezado principal (h1) */
+h1 {
+    font-size: 24px; /* Tamaño de fuente de 24px */
+    margin-bottom: 20px; /* Margen inferior de 20px para espaciarlo del siguiente elemento */
+    color: #333; /* Color del texto en gris oscuro */
+}
+
+/* Estilo del ícono del usuario */
 .material-icons {
-    font-size: 200px;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 150px; /* Tamaño del ícono */
+    color: #362117; /* Color azul para el ícono */
+    margin-bottom: 20px; /* Margen inferior para separarlo del resto del contenido */
 }
 
-.iniciosesion{
-    width: 500px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+/* Estilos para los campos de entrada de material (mat-form-field) */
+.mat-form-field {
+    width: 100%; /* Los campos de entrada ocuparán el 100% del ancho del contenedor */
+    margin-bottom: 20px; /* Margen inferior para separarlos unos de otros */
 }
 
-mat-form-field{
-    width: 500px;
+input[matInput] {
+    width: 100%; /* Los campos de texto ocupan todo el ancho disponible */
+    padding: 10px; /* Espacio interno en el campo de texto */
+    box-sizing: border-box; /* El padding se incluye en el ancho total del campo */
 }
 
-p{
-    width: 500px;
-    text-align: center;
+/* Estilo del botón de inicio de sesión */
+.btn-guardar {
+    width: 100%; /* El botón ocupará todo el ancho disponible */
+    padding: 10px; /* Espaciado interno de 10px para hacer el botón más grande */
+    background-color: #362117; /* Color de fondo azul */
+    color: #ffffff; /* El texto del botón será blanco */
+    font-size: 14px; /* Tamaño de fuente del botón */
+    border: none; /* Elimina cualquier borde predeterminado del botón */
+    border-radius: 5px; /* Bordes redondeados en el botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    margin-top: 10px;
 }
 
-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+/* Efecto hover para el botón cuando el usuario pasa el cursor sobre él */
+.btn-guardar:hover {
+    background-color: #412f27; /* Color de fondo más claro al hacer hover */
 }
 
-.btn-guardar{
-    color: white;
-    background-color: #3d210a;
+/* Media query para pantallas pequeñas (teléfonos móviles, menos de 600px) */
+@media (max-width: 600px) {
+    .container.iniciosesion {
+        padding: 15px; /* Reduce el padding para aprovechar mejor el espacio */
+        margin: 30px auto; /* Reduce el margen superior en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduce el tamaño del título para pantallas pequeñas */
+    }
+
+    .material-icons {
+        font-size: 120px; /* Reduce el tamaño del ícono */
+    }
+
+    .btn-guardar {
+        font-size: 14px; /* Reduce el tamaño del texto del botón */
+        padding: 8px; /* Reduce el padding para ajustarse al tamaño de pantalla */
+    }
+}
+
+/* Media query para pantallas medianas (tabletas, menos de 768px) */
+@media (max-width: 768px) {
+    .container.iniciosesion {
+        padding: 20px; /* Mantiene el padding en 20px para pantallas medianas */
+        max-width: 90%; /* El contenedor ocupará el 90% del ancho de la pantalla */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajusta el tamaño del título para pantallas medianas */
+    }
+
+    .material-icons {
+        font-size: 130px; /* Ajusta el tamaño del ícono */
+    }
+
+    .btn-guardar {
+        font-size: 15px; /* Ajusta el tamaño del texto del botón */
+    }
+}
+
+/* Media query para pantallas grandes (desktops, más de 1024px) */
+@media (min-width: 1024px) {
+    .container.iniciosesion {
+        max-width: 500px; /* El contenedor puede ser un poco más ancho en pantallas grandes */
+    }
+
+    h1 {
+        font-size: 28px; /* El título será más grande en pantallas grandes */
+    }
+
+    .material-icons {
+        font-size: 180px; /* El ícono será más grande en pantallas grandes */
+    }
+
+    .btn-guardar {
+        font-size: 15px; /* Aumenta el tamaño del texto del botón */
+        padding: 12px; /* Aumenta el padding del botón */
+    }
 }

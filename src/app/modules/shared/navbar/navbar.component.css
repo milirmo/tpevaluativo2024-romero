@@ -29,11 +29,11 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         background-color: #4d3428;
     }
 
-    .logo {
+    .logo-inicio {
         width: 40px;
         border-radius: 200px;
         margin-right: auto;
-
+        cursor: pointer;
     }
 
     .carrito {
@@ -46,7 +46,7 @@ la pantalla (px) o resolución del dispositivo que abre la app.
 /*para pantallas computadora, televisor, tablet*/
 @media(min-width: 700px) {
     mat-toolbar {
-        background-color: #4b3426;
+        background-color: #3a2b20;
         color: rgb(255, 255, 255);
     }
 
@@ -55,10 +55,11 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         display: none;
     }
 
-    .logo {
+    .logo-inicio {
         width: 50px;
         border-radius: 200px;
         margin-right: auto;
+        cursor: pointer;
         transition: transform 4s ease;
         /* Aplica una transición suave */
     }
@@ -66,14 +67,14 @@ la pantalla (px) o resolución del dispositivo que abre la app.
 
 
     /* Cuando el cursor se posicione encima del logo: */
-    .logo:hover {
+    .logo-inicio:hover {
         animation: girar 2s ease forwards;
         /* gira 2 vueltas en 2segs */
     }
     /* definición de la animación de rotación */
     @keyframes girar {
         from {
-            transform: rotate(0deg);
+            transform: rotate(0deg);    
             /* comienza en 0 grados */
         }
 
@@ -84,12 +85,14 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     }
 
     .boton-productos {
-        background-color: #3a2b20;
-        border-radius: 15px;
+        border-radius: 17px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .boton-productos:hover {
-        background-color: #4d3428;
+        background-color: #ffffff;
+        color: #3a2b20;
     }
 
     .carrito {
