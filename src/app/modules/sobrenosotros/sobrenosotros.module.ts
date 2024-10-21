@@ -12,6 +12,9 @@ import { SobrenosotrosComponent } from './page/sobrenosotros/sobrenosotros.compo
   imports: [
     CommonModule,
     SobrenosotrosRoutingModule
+  ],
+  exports: [
+    
   ]
 })
 export class SobrenosotrosModule { }

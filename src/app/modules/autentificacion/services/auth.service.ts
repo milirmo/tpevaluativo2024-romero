@@ -71,7 +71,7 @@ export class AuthService {
     .pipe(map((usuario: any) => usuario ? usuario.rol: null));
   }
 
-  //FUNCION PARA ENVIAR EL ROL OBTENIDO -> asignarlo al rol de la variable local
+  //FUNCION PARA ENVIAR EL ROL OBTENIDO -> asignarlo al rol de la variable local "rolUsuario"
   setUsuarioRol(rol: string){
     this.rolUsuario = rol; //recibe rol del usuario y lo envía a la propiedad rolUsuario que creamos
   }

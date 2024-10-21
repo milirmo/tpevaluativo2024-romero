@@ -16,26 +16,36 @@ import { ThrillerComponent } from './page/thriller/thriller.component';
 
 @NgModule({
   declarations: [
-    TodosproductosComponent,
     CardComponent,
+
+    TodosproductosComponent,
     FiccionComponent,
     RomanceComponent,
     PolicialComponent,
+    ThrillerComponent,
+
     CardFiccionComponent,
     CardPolicialComponent,
     CardRomanceComponent,
-    CardThrillerComponent,
-    ThrillerComponent
+    CardThrillerComponent
   ],
   imports: [
     CommonModule,
     ProductoRoutingModule
   ],
   exports: [
-    ProductoRoutingModule,
+    CardComponent,
+
+    TodosproductosComponent,
+    FiccionComponent,
+    RomanceComponent,
+    PolicialComponent,
+    ThrillerComponent,
+
     CardFiccionComponent,
     CardPolicialComponent,
-    CardRomanceComponent
+    CardRomanceComponent,
+    CardThrillerComponent
   ]
 })
 export class ProductoModule { }

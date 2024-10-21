@@ -4,8 +4,8 @@ import { InicioComponent } from './page/inicio/inicio.component';
 
 const routes: Routes = [
   
-   //routeo componente inicio al inciar la página (mientras cargan modulos)
-   {
+  //routeo componente inicio al inciar la página (mientras cargan modulos)
+  {
     path: '', component: InicioComponent
   },
 

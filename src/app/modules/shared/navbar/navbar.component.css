@@ -40,8 +40,29 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         margin-left: auto;
     }
 
+    /* Cuando se haga click en el logo: */
+    .logo-inicio:active {
+        /*
+        ease: movimiento suave; 
+        forward: vuelve al mismo lugar al terminar
+        */
+        animation: girar 2s ease forwards;
+        /* gira 2 vueltas en 2segs */
+    }
+    /* definición de la animación "girar" */
+    @keyframes girar {
+        from {
+            transform: rotate(0deg);    
+            /* empieza en 0 grados */
+        }
+        to {
+            transform: rotate(720deg);
+            /* gira 2 vueltas completas, de 360 grados*/
+        }
+    }
 
 }
+
 
 /*para pantallas computadora, televisor, tablet*/
 @media(min-width: 700px) {
@@ -65,7 +86,6 @@ la pantalla (px) o resolución del dispositivo que abre la app.
     }
 
 
-
     /* Cuando el cursor se posicione encima del logo: */
     .logo-inicio:hover {
         animation: girar 2s ease forwards;
@@ -77,7 +97,6 @@ la pantalla (px) o resolución del dispositivo que abre la app.
             transform: rotate(0deg);    
             /* comienza en 0 grados */
         }
-
         to {
             transform: rotate(720deg);
             /* gira 2 vueltas completas (360)*/

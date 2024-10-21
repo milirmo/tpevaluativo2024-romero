@@ -14,6 +14,10 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     CommonModule,
     InicioRoutingModule,
+  ],
+  exports: [
+    InicioComponent,
+    CardComponent
   ]
 })
 export class InicioModule { }
