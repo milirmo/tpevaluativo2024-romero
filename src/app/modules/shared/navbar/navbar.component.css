@@ -3,41 +3,91 @@ Media querys son estilos que se aplican dependiendo de
 la pantalla (px) o resolución del dispositivo que abre la app.
 */
 
-/*para pantallas chicas (celular)*/
-@media(min-width: 300px) and (max-width: 700px) {
+mat-toolbar {
+    background-color: #3a2b20;
+    color: rgb(255, 255, 255);
+}
 
-    mat-toolbar {
-        background-color: #503b2f;
-        color: rgb(255, 255, 255);
-    }
-
-    /*oculta éstas secciones en caso de pantalla mayor a 700px*/
-    #menuInicio {
-        display: none;
-    }
-
-    #menuProducto {
-        display: none;
-    }
-
-    .boton-productos {
-        background-color: #3a2b20;
-        border-radius: 15px;
-    }
-
-    .boton-productos:hover {
-        background-color: #4d3428;
-    }
+/*para pantallas computadora, televisor, tablet*/
+@media(min-width: 700px) {
 
     .logo-inicio {
-        width: 40px;
+        width: 50px;
         border-radius: 200px;
         margin-right: auto;
         cursor: pointer;
+        transition: transform 4s ease;
+        /* Aplica una transición suave */
     }
 
-    .carrito {
-        margin-left: auto;
+    /* Cuando el cursor se posicione encima del logo: */
+    .logo-inicio:hover {
+        animation: girar 2s ease forwards;
+        /* gira 2 vueltas en 2segs */
+    }
+    /* definición de la animación de rotación */
+    @keyframes girar {
+        from {
+            transform: rotate(0deg);    
+            /* comienza en 0 grados */
+        }
+        to {
+            transform: rotate(720deg);
+            /* gira 2 vueltas completas (360)*/
+        }
+    }
+
+    /*estilos para acomodar los containers en sus posiciones (izquierda, centro, derecha)*/
+    .mat-toolbar {
+        display: flex;
+        justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+        align-items: center; /* Centra verticalmente los elementos dentro de cada contenedor */
+    }  
+    .container-izq,
+    .container-centro,
+    .container-der {
+        display: flex;
+        align-items: center;
+    }
+    
+
+    /*estilos para los botones con texto del menú*/
+    .btn-menu{
+        cursor: pointer;
+        padding: 0.4rem;
+        border-radius: 3rem;
+        text-align: center;
+        margin: 10px;
+    }
+    .btn-menu:hover{
+        background-color: #e6ddd8;
+        color: #3a2b20;
+    }
+
+
+    /*estilos para los botones íconos*/
+    .boton-icon-menu:hover{
+        background-color: #e6ddd8;
+        color: #3a2b20;
+    }
+
+
+    /*estilo especial para ícono "home"*/
+    .icono-home{
+        margin-left: 10px;
+    }
+
+}
+
+
+/*para pantallas chicas (celular)*/
+@media(min-width: 300px) and (max-width: 700px) {
+
+    .logo-inicio {
+        width: 35px;
+        border-radius: 200px;
+        margin-right: auto;
+        margin-bottom: 7px;
     }
 
     /* Cuando se haga click en el logo: */
@@ -61,60 +111,4 @@ la pantalla (px) o resolución del dispositivo que abre la app.
         }
     }
 
-}
-
-
-/*para pantallas computadora, televisor, tablet*/
-@media(min-width: 700px) {
-    mat-toolbar {
-        background-color: #3a2b20;
-        color: rgb(255, 255, 255);
-    }
-
-    /*oculta ésta sección en caso de pantalla menor a 700px*/
-    #menuSecciones {
-        display: none;
-    }
-
-    .logo-inicio {
-        width: 50px;
-        border-radius: 200px;
-        margin-right: auto;
-        cursor: pointer;
-        transition: transform 4s ease;
-        /* Aplica una transición suave */
-    }
-
-
-    /* Cuando el cursor se posicione encima del logo: */
-    .logo-inicio:hover {
-        animation: girar 2s ease forwards;
-        /* gira 2 vueltas en 2segs */
-    }
-    /* definición de la animación de rotación */
-    @keyframes girar {
-        from {
-            transform: rotate(0deg);    
-            /* comienza en 0 grados */
-        }
-        to {
-            transform: rotate(720deg);
-            /* gira 2 vueltas completas (360)*/
-        }
-    }
-
-    .boton-productos {
-        border-radius: 17px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .boton-productos:hover {
-        background-color: #ffffff;
-        color: #3a2b20;
-    }
-
-    .carrito {
-        margin-left: auto;
-    }
 }

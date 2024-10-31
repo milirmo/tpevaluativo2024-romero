@@ -65,7 +65,7 @@
 /* Botón dentro de la tarjeta */
 .btn {
   cursor: pointer;
-  background-color: #83736b;
+  background-color: #503b2f;
   color: white;
   padding: 10px 20px; /* Ajusta el relleno del botón */
   border-radius: 40px; /* Botón con bordes redondeados */
@@ -74,7 +74,7 @@
 
 /* Cambio de color del botón en hover */
 .btn:hover {
-  background-color: #746761; /* Cambia el color de fondo al hacer hover */
+  background-color: #5f483b; /* Cambia el color de fondo al hacer hover */
   color: white; /* Cambia el color del texto a blanco */
 }
 
@@ -144,20 +144,4 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Botón dentro del modal */
-.btn {
-  background-color: #83736b;
-  color: white;
-  cursor: pointer;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1rem;
-  padding: 10px 20px; /* Ajusta el relleno del botón */
-  margin-bottom: 10px;
-  border-radius: 40px; /* Botón con bordes redondeados */
-}
 
-/* Cambio de color del botón en hover */
-.btn:hover {
-  background-color: #746761; /* Cambia el color de fondo al hacer hover */
-  color: white; /* Cambia el color del texto a blanco */
-}

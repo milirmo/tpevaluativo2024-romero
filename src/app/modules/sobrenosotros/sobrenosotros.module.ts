@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SobrenosotrosRoutingModule } from './sobrenosotros-routing.module';
 import { SobrenosotrosComponent } from './page/sobrenosotros/sobrenosotros.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -11,10 +12,12 @@ import { SobrenosotrosComponent } from './page/sobrenosotros/sobrenosotros.compo
   ],
   imports: [
     CommonModule,
-    SobrenosotrosRoutingModule
+    SobrenosotrosRoutingModule,
+    MatGridListModule
   ],
   exports: [
-    
+    SobrenosotrosComponent,
+    MatGridListModule
   ]
 })
 export class SobrenosotrosModule { }

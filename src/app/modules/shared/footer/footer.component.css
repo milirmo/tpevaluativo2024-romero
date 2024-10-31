@@ -52,6 +52,11 @@ body {
     border-radius: 50px;
 }
 
+#menuAdmin{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+}
+
 .footer-contact p {
     margin: 5px 0;
 }

@@ -1,15 +1,16 @@
-<mat-toolbar>
+<mat-toolbar class="sticky-top">
 
-    <img class="logo-inicio" routerLink="/inicio" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
-
+    <div class="container-izq">
+      <img class="logo-inicio" routerLink="/inicio" src="../../../../assets/segundo-logo.jpg" alt="Logo Booktour">
   
-    <!--boton para dirigirse a la página inicio (luego se debe importar en shared.module.ts) -->
-    <button mat-icon-button routerLink="inicio">
-      <mat-icon>home</mat-icon>
-    </button>
+      <button class="boton-icon-menu icono-home" mat-icon-button routerLink="inicio">
+          <mat-icon>home</mat-icon>
+      </button>
+    </div>
 
-    <!--boton menu desplegable (para ir a los productos) -->
-    <button class="boton-productos" mat-button [matMenuTriggerFor]="productos">Ver libros</button>
+    <div class="container-centro">
+      <!--boton menu desplegable (para ir a los productos) -->
+    <button class="btn-menu" mat-button [matMenuTriggerFor]="productos">Libros</button>
     <mat-menu #productos="matMenu">
       <button mat-menu-item routerLink="todos-los-productos">Todos los géneros</button>
       <button mat-menu-item routerLink="productos-ficcion">Ciencia Ficcion</button>
@@ -17,26 +18,27 @@
       <button mat-menu-item routerLink="productos-thriller">Thriller</button>
       <button mat-menu-item routerLink="productos-romance">Romance</button>
     </mat-menu>
+    
+    <!--boton para dirigirse a la página sobre nosotros -->
+    <button class="btn-menu" mat-button routerLink="sobrenosotros">Acerca de</button>
+    </div>
 
-    <!--boton ruta administración-->
-    <button id="menuAdmin" mat-button routerLink="admin">Admin</button>
 
-    <span class="example-spacer"></span>
-
-
-    <!--inicio de sesión y registro de un nuevo usuario -->
-    <button mat-icon-button [matMenuTriggerFor]="usuario">
-      <mat-icon>person</mat-icon>
-     </button>
-     <mat-menu #usuario="matMenu">
-      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="registro">Registrarse</button>
-      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="inicio-sesion">Iniciar sesión</button>
-      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
-      </mat-menu>
-
-      <!--carrito (próximamente)-->
-    <button mat-icon-button class="example-icon carrito" aria-label="Example icon-button with heart icon">
-      <mat-icon>shopping_cart</mat-icon>
-    </button>
+    <div class="container-der">
+      <!--inicio de sesión y registro de un nuevo usuario -->
+      <button class="boton-icon-menu" mat-icon-button [matMenuTriggerFor]="usuario">
+        <mat-icon>person</mat-icon>
+       </button>
+       <mat-menu #usuario="matMenu">
+        <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="registro">Registrarse</button>
+        <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="inicio-sesion">Iniciar sesión</button>
+        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
+        </mat-menu>
+  
+        <!--carrito (próximamente)-->
+      <button mat-icon-button class="boton-icon-menu" aria-label="Example icon-button with heart icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
 
 </mat-toolbar>
