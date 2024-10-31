@@ -16,7 +16,7 @@ body {
 
 /* Estilos para el footer */
 .site-footer {
-    background-color: #61412d;
+    background-color: #503525;
     color: #fff;
     padding: 20px 0;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .nav{
-    background-color: #503524;
+    background-color: #422c1e;
     padding: 10px;
     border-radius: 50px;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .footer-bottom {
-    background-color: #503524;
+    background-color: #422c1e;
     text-align: center;
     padding: 10px 0;
     color: #ccc;
@@ -76,6 +76,7 @@ body {
     .container {
         flex-direction: column; /* Cambia a una disposición de columna en pantallas más pequeñas */
         text-align: center; /* Centra todo el contenido cuando está en columna */
+        margin-top: 1rem;
     }
 
     .footer-logo,

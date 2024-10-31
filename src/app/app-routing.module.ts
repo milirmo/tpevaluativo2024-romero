@@ -49,6 +49,12 @@ const routes: Routes = [
     path: ''
     ,loadChildren: () => import('./modules/faqs/faqs.module').then(m => m.FaqsModule)
   },
+
+   //routeo modulo carrito
+   {
+    path: ''
+    ,loadChildren: () => import('./modules/carrito/carrito.module').then(m => m.CarritoModule)
+  },
 ];
 
 @NgModule({

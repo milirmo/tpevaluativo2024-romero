@@ -60,14 +60,14 @@ mat-toolbar {
         margin: 10px;
     }
     .btn-menu:hover{
-        background-color: #e6ddd8;
+        background-color: #efe7dd;
         color: #3a2b20;
     }
 
 
     /*estilos para los botones íconos*/
     .boton-icon-menu:hover{
-        background-color: #e6ddd8;
+        background-color: #efe7dd;
         color: #3a2b20;
     }
 
@@ -81,7 +81,7 @@ mat-toolbar {
 
 
 /*para pantallas chicas (celular)*/
-@media(min-width: 300px) and (max-width: 700px) {
+@media(min-width: 290px) and (max-width: 700px) {
 
     .logo-inicio {
         width: 35px;
