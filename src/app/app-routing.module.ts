@@ -44,16 +44,16 @@ const routes: Routes = [
     ,loadChildren: () => import('./modules/sobrenosotros/sobrenosotros.module').then(m => m.SobrenosotrosModule)
   },
 
-  //routeo modulo preguntas frecuentes (faqs)
-  {
-    path: ''
-    ,loadChildren: () => import('./modules/faqs/faqs.module').then(m => m.FaqsModule)
-  },
-
    //routeo modulo carrito
    {
     path: ''
     ,loadChildren: () => import('./modules/carrito/carrito.module').then(m => m.CarritoModule)
+  },
+
+  //routeo modulo contacto
+  {
+    path: ''
+    ,loadChildren: () => import('./modules/contacto/contacto.module').then(m => m.ContactoModule)
   },
 ];
 

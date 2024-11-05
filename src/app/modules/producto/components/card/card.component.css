@@ -64,6 +64,7 @@
 
 /* Botón dentro de la tarjeta */
 .btn {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   cursor: pointer;
   background-color: #503b2f;
   color: white;

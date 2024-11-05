@@ -27,13 +27,19 @@ h1 {
 /* Estilos para los campos de entrada de material (mat-form-field) */
 .mat-form-field {
     width: 100%; /* Los campos de entrada ocuparán el 100% del ancho del contenedor */
-    margin-bottom: 20px; /* Margen inferior para separarlos unos de otros */
+    margin-bottom: 30px; /* Margen inferior para separarlos unos de otros */
 }
 
 input[matInput] {
     width: 100%; /* Los campos de texto ocupan todo el ancho disponible */
     padding: 10px; /* Espacio interno en el campo de texto */
     box-sizing: border-box; /* El padding se incluye en el ancho total del campo */
+}
+
+.div-boton-guardar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 /* Estilo del botón de inicio de sesión */
@@ -55,7 +61,7 @@ input[matInput] {
 }
 
 /* Media query para pantallas pequeñas (teléfonos móviles, menos de 600px) */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .container.iniciosesion {
         padding: 15px; /* Reduce el padding para aprovechar mejor el espacio */
         margin: 30px auto; /* Reduce el margen superior en pantallas pequeñas */
@@ -96,7 +102,7 @@ input[matInput] {
 }
 
 /* Media query para pantallas grandes (desktops, más de 1024px) */
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
     .container.iniciosesion {
         max-width: 500px; /* El contenedor puede ser un poco más ancho en pantallas grandes */
     }

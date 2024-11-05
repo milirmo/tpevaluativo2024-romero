@@ -6,8 +6,9 @@
   
       <!--email-->
       <mat-form-field appearance="fill">
-        <mat-label>Ingrese su email:</mat-label>
-        <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepitoperez2022@gmail.com" required>
+        <mat-label>Ingrese correo electrónico:</mat-label>
+        <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: ejemplo@gmail.com" required>
+        <mat-hint align="start">Ingrese correo electrónico</mat-hint>
       </mat-form-field>
   
       <!--contraseña-->
@@ -18,11 +19,13 @@
           [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
-        <mat-hint align="start">Mínimo:6/{{input.value.length}}</mat-hint>
+        <mat-hint align="start">Ingrese contraseña: 6/{{input.value.length}}</mat-hint>
       </mat-form-field>
   
       <!--boton guardar inicio sesión-->
-      <button class="btn-guardar" mat-raised-button (click)="iniciarSesion()">Iniciar sesión</button>
+      <div class="div-boton-guardar">
+        <button class="btn-guardar" mat-raised-button (click)="iniciarSesion()">Iniciar sesión</button>
+      </div>
   
     </div>
   </div>

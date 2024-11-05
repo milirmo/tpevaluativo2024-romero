@@ -5,7 +5,6 @@
   
   
         <!--nombre de usuario-->
-        <p>
             <mat-form-field appearance="fill" required>
               <mat-label>Nombre de usuario</mat-label>
               <!--[(ngModel)]: directiva bidireccional para formularios-->
@@ -13,47 +12,32 @@
               <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
               <mat-hint>Ingrese nombre de usuario</mat-hint>
             </mat-form-field>
-        </p>
-  
-  
-        <!--apellido de usuario-->
-        <p>
-          <mat-form-field appearance="fill" required>
-            <mat-label>Apellido de usuario</mat-label>
-            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Popón">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            <mat-hint>Ingrese apellido de usuario</mat-hint>
-          </mat-form-field>
-       </p>
   
   
         <!--mail de usuario-->
-        <p>
             <mat-form-field appearance="fill" required>
               <mat-label>Correo electrónico</mat-label>
-              <input [(ngModel)]="usuarios.email" matInput placeholder="usuario@gmail.com">
+              <input [(ngModel)]="usuarios.email" matInput placeholder="ejemplo@gmail.com">
               <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
               <mat-hint>Ingrese correo electrónico</mat-hint>
             </mat-form-field>
-        </p>
   
-      
   
         <!--contraseña-->
-        <p>
           <mat-form-field>
             <mat-label>Ingrese una contraseña</mat-label>
             <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-            <mat-hint aling="start">6/{{input.value.length}}</mat-hint>
+            <mat-hint aling="start">Ingrese una contraseña: 6/{{input.value.length}}</mat-hint>
           </mat-form-field>
-        </p>
   
         
         <!--boton guardar registro-->
-        <button class="btn-guardar" mat-raised-button color="primary" (click)="registrarUsuarios()">Registrar</button>
+        <div class="div-boton-guardar">
+          <button class="btn-guardar" mat-raised-button color="primary" (click)="registrarUsuarios()">Registrar</button>
+        </div>
   
     </div>
   </div>
