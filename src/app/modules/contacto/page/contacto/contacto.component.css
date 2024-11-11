@@ -1,8 +1,38 @@
-/*ESTILOS PARA EL DIV GENERAL (form, maps)*/
-.container, .row{
+/*ESTILOS PARA LINKS REDES SOCIALES*/
+.row{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.col-lg-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.redes-sociales{
+    margin-top: 10px;
+}
+
+.logo-redes{
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+}
+
+.img-redes{
+    width: 80px;
+}
+
+
+/*ESTILOS PARA EL DIV GENERAL (form, maps)*/
+.container-form-maps, .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 
@@ -90,10 +120,6 @@ input::placeholder, textarea::placeholder{
 
 
 @media(min-width: 700px){
-    /*estilos para formw*/
-    .container{
-        margin: 20px;
-    }
 
     /*ESTILOS PARA MAPS*/
     .maps{
@@ -104,6 +130,7 @@ input::placeholder, textarea::placeholder{
 }
 
 @media(max-width: 700px){
+
     /*estilo para el form*/
     form{
         padding: 15px;

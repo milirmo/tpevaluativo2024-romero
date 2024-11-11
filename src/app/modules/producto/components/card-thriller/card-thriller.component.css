@@ -120,8 +120,7 @@
 }
 
 
-
-/*ESTILOS PARA EL MODAL*/
+/* ESTILOS PARA EL MODAL */
 
 .modal-body{
   text-align: center;
@@ -145,4 +144,7 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
+.modal-footer{
+  display: flex;
+  justify-content: center;
+}

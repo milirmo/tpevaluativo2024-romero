@@ -8,6 +8,7 @@
     background-color: #ffffff; /* Fondo blanco para el contenedor */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor del contenedor */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilo del encabezado principal (h1) */
@@ -27,7 +28,6 @@ h1 {
 /* Estilos para los campos de entrada de material (mat-form-field) */
 .mat-form-field {
     width: 100%; /* Los campos de entrada ocuparán el 100% del ancho del contenedor */
-    margin-bottom: 30px; /* Margen inferior para separarlos unos de otros */
 }
 
 input[matInput] {

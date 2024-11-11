@@ -59,6 +59,11 @@
                     <label class="from-label">Ingrese texto alterntivo para la imagen del producto:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="Descripción de la imagen...">
                 </div>
+                <!--stock (cantidad)-->
+                <div class="mb-3">
+                    <label class="from-label">Ingrese cantidad en stock:</label>
+                    <input class="form-control" type="number" formControlName="stock" placeholder="Stock del producto...">
+                </div>
             </div>
 
 
@@ -128,6 +133,11 @@
                     <label class="from-label">Ingrese texto alternativo para imagen del producto:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="{{productoEdit.alt}}">
                 </div>
+                <!--stock (cantidad)-->
+                <div class="mb-3">
+                    <label class="from-label">Ingrese cantidad en stock:</label>
+                    <input class="form-control" type="number" formControlName="stock" placeholder="{{productoEdit.stock}}">
+                </div>
             </div>
 
 
@@ -189,6 +199,7 @@ td: renglones sin negrita
             <th scope="col">Categoria</th>
             <th scope="col">Autor</th>
             <th scope="col">Descripción</th>
+            <th scope="col">Stock</th>
             <th scope="col">Acciones</th> <!--th para separar acciones del cuerpo de la tabla-->
         </tr>
 
@@ -207,6 +218,7 @@ td: renglones sin negrita
             <td>{{producto.categoria}}</td>
             <td>{{producto.autor}}</td>
             <td>{{producto.descripcion}}</td>
+            <td>{{producto.stock}}</td>
 
             <!--ACCIONES-->
             <td>
