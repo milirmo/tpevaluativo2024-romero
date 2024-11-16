@@ -98,7 +98,7 @@ export class CarritoService {
     } catch (error) {
       Swal.fire({
         title:'¡Oh no!',
-        text:'Ha ocurrido un error al intentar subir su producto \n'+error,
+        text:'Ha ocurrido un error al intentar subir el producto \n'+error,
         icon:'error'
       })
     }
@@ -111,9 +111,9 @@ export class CarritoService {
       this.pedidosColeccion.doc(pedido.idPedido).delete();
 
       Swal.fire({
-        title:'${pedido.producto.nombre} ha sido borrado',
-        text:'Ha borrado correctamente el producto.',
-        icon:'info',
+        title:'El producto ha sido borrado',
+        text:'Se ha borrado correctamente el producto.',
+        icon:'success',
       })
 
     } catch (error) {

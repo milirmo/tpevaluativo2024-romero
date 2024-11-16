@@ -13,6 +13,8 @@ import { CardRomanceComponent } from './components/card-romance/card-romance.com
 import { CardThrillerComponent } from './components/card-thriller/card-thriller.component';
 import { ThrillerComponent } from './page/thriller/thriller.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ThrillerComponent } from './page/thriller/thriller.component';
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule, 
+    FormsModule, 
+    ReactiveFormsModule
   ],
   exports: [
     CardComponent,

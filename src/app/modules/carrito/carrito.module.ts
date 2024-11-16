@@ -2,21 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CarritoRoutingModule } from './carrito-routing.module';
-import { CarritoComponent } from './page/carrito/carrito.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
+
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    CarritoComponent,
     PedidoComponent
   ],
   imports: [
     CommonModule,
-    CarritoRoutingModule
+    CarritoRoutingModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    CarritoComponent
+    PedidoComponent,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CarritoModule { }
