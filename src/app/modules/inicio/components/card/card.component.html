@@ -1,27 +1,75 @@
+<!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
+<div class="container-tarjetas">
+    <div class="card" style="width: 18rem;" *ngFor="let producto of coleccionProductos">
+        <img src="{{producto.imagen}}" class="card-img" alt="{{producto.alt}}">
 
-<!--div que reune todas las tarjetas que se creen-->
-  <div class="tarjetas">
-
-    <div class="card" style="width: 18rem;" *ngFor="let tarjeta of tarjetas">
-        <img src="{{tarjeta.img}}" class="card-img-top">
         <div class="card-body">
 
-          <div class="contenedor">
+            <div class="contenedor-tituloYautor">
+                <h3 class="card-title">
+                    <b>{{producto.nombre}}</b>
+                </h3>
 
-            <h3 class="card-title">
-              <b>{{tarjeta.titulo}}</b>
-            </h3>
-  
-            <p class="card-text">{{tarjeta.genero}}</p>
-            <p class="card-text">{{tarjeta.autor}}</p>
-            
-          </div>
-        
-          <h3 class="card-title card-precio">$ {{tarjeta.precio}}</h3>
+                <p class="card-autor">{{producto.autor}}</p>
+            </div>
 
-          <a routerLink="/todos-los-productos" class="btn">Ver más</a>
+
+            <div class="contenedor-precioYboton">
+                <p class="card-precio">$ {{producto.precio}}</p>
+
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#verMas"
+                    (click)="mostrarVer(producto)">Ver más</button>
+            </div>
 
         </div>
-      </div>
+    </div>
+</div>
 
-  </div>
+
+<!-- Modal para ver más información -->
+<div class="modal fade" *ngIf="modalVisible" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-horizontal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{productoSeleccionado.nombre}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="body-content">
+                    <img class="img-modal" src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
+
+                    <div class="info-content">
+                        <div class="mb-precio">
+                            $ {{productoSeleccionado.precio}}
+                        </div>
+
+                        <div class="mb-3">
+                            Unidades disponibles: {{productoSeleccionado.stock}}
+                        </div>
+
+                        <div class="mb-descripcion">
+                            {{productoSeleccionado.descripcion}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="cantidad">
+                    <div class="mb-3">¿Cuántas unidades desea añadir al carrito?</div>
+                    <input type="number" placeholder="Cantidad" [(ngModel)]="stock">
+                </div>
+
+                <div class="botonesfooter">
+                    <button type="button" class="btn" data-bs-dismiss="modal"
+                        (click)="agregarProducto(productoSeleccionado)">Agregar al carrito</button>
+
+                    <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

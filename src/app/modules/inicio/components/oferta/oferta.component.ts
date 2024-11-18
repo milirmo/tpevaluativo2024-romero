@@ -5,11 +5,11 @@ import { CarritoService } from 'src/app/modules/carrito/service/carrito.service'
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-oferta',
+  templateUrl: './oferta.component.html',
+  styleUrls: ['./oferta.component.css']
 })
-export class CardComponent {
+export class OfertaComponent {
 
   // Definimos colección de productos locales
   coleccionProductos: Producto[] = [];
@@ -20,7 +20,7 @@ export class CardComponent {
   // Variable local para manejar estado de un modal
   modalVisible: boolean = false;
 
-  stock: number = 0
+  stock: number = 0;
 
   constructor(
     public servicioCrud: CrudService,
@@ -28,9 +28,9 @@ export class CardComponent {
   ){}
 
   ngOnInit(): void{
-    this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto;
-    })
+    this.servicioCrud.obtenerProducto().subscribe(productos => {
+      this.coleccionProductos = productos.filter(producto => producto.oferta === 'true');
+    });
 
     //inicia carrito apenas se ingresa a productos
     this.servicioCarrito.iniciarCarrito();

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { Libro } from 'src/app/models/libro';
+import { Producto } from 'src/app/models/producto';
+import { CrudService } from 'src/app/modules/admin/service/crud.service';
+import { CarritoService } from 'src/app/modules/carrito/service/carrito.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card',
@@ -7,44 +10,62 @@ import { Libro } from 'src/app/models/libro';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  //Llamo a la interfaz Libros (productos)
-  public tarjetas: Libro[];
 
-  constructor() {
-    this.tarjetas = [
-      {
-        uid: "",
-        titulo: "Harry Potter y la piedra filosofal",
-        genero: "Novela / Fantasía",
-        autor: "J.K Rowling",
-        img: "https://cdnx.jumpseller.com/queleola/image/10413614/resize/540/540?1602090638",
-        precio: 9000
-      },
-      {
-        uid: "",
-        titulo: "Indias Blancas",
-        genero: "Novela / Historia",
-        autor: "Florencia Bonelli",
-        img: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327292662l/13421452.jpg",
-        precio: 7000
-      },
-      {
-        uid: "",
-        titulo: "Animales Fantásticos y Dónde Encontrarlos",
-        genero: "Fantasía / Estudio",
-        autor: "J.K Rowling",
-        img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1253335238i/2490849.jpg",
-        precio: 11000
-      },
-      {
-        uid: "",
-        titulo: "La Trilogía de New York",
-        genero: "Novela / Suspenso / Policial",
-        autor: "Paul Auster",
-        img: "https://www.planetadelibros.com/usuaris/libros/fotos/301/original/portada_la-trilogia-de-nueva-york_paul-auster_201907181317.jpg",
-        precio: 10000
-      },
+  // Definimos colección de productos locales
+  coleccionProductos: Producto[] = [];
 
-    ]
+  // Variable local para seleccionar un producto específico
+  productoSeleccionado!: Producto;
+
+  // Variable local para manejar estado de un modal
+  modalVisible: boolean = false;
+
+  stock: number = 0;
+
+  constructor(
+    public servicioCrud: CrudService,
+    public servicioCarrito: CarritoService
+  ){}
+
+  ngOnInit(): void{
+    this.servicioCrud.obtenerProducto().subscribe(productos => {
+      this.coleccionProductos = productos.filter(producto => producto.oferta === 'false');
+    });
+
+    //inicia carrito apenas se ingresa a productos
+    this.servicioCarrito.iniciarCarrito();
   }
+
+  // Función para mostrar más información de los productos
+  mostrarVer(info: Producto){
+    // Cambio estado del modal a true (ahora es visible)
+    this.modalVisible = true;
+
+    // Guardo en variable seleccionado la información de producto elegido
+    this.productoSeleccionado = info;
+  }
+
+  agregarProducto(info : Producto){
+
+    const stockDeseado = Math.trunc(this.stock);
+
+    if (stockDeseado <= 0 || stockDeseado > info.stock) {
+
+      Swal.fire({
+        title:"Error al agregar el producto",
+        text:"Stock insuficiente",
+        icon:"error"
+      })
+
+    } else {
+      this.servicioCarrito.crearPedido(info, stockDeseado);
+
+      Swal.fire({
+        title:"¡Excelente!",
+        text:"Producto añadido al carrito.",
+        icon:"success"
+      })
+    }
+  }
+
 }

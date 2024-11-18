@@ -44,8 +44,6 @@ export class TableComponent {
     })
   }
   async agregarProducto() {
-    //resetea el formulario y queda vacío
-    this.producto.reset()
 
     if (this.producto.valid) {
       let nuevoProducto: Producto = {
@@ -68,9 +66,6 @@ export class TableComponent {
             text: "El nuevo producto se agregó exitosamente.",
             icon: "success"
           });
-
-          //resetea el formulario y queda vacío
-          this.producto.reset()
         })
 
         .catch(error => {
