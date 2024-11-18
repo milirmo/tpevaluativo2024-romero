@@ -33,8 +33,6 @@ export class RegistroComponent {
     //"0" (CERO) para los tipo number
     uid: '',
     nombre: '',
-    apellido: '',
-    edad: 0,
     email: '',
     rol: 'usuario', // -> al registrarse, todos los usuarios serán "visitante"
     password: ''
@@ -110,7 +108,6 @@ export class RegistroComponent {
     const inputs = {
       uid: this.usuarios.uid = '',
       nombre: this.usuarios.nombre = '',
-      apellido: this.usuarios.apellido = '',
       email: this.usuarios.email = '',
       rol: this.usuarios.rol = 'visitante',
       password: this.usuarios.password = ''

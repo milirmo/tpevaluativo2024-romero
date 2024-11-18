@@ -33,6 +33,7 @@ export class CarritoService {
         imagen:'',
         autor:'',
         alt:'',
+        oferta:'',
         stock:0,
     },
     cantidad:0,

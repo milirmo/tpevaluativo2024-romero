@@ -1,11 +1,8 @@
-/*
-Media querys son estilos que se aplican dependiendo de 
-la pantalla (px) o resolución del dispositivo que abre la app.
-*/
 
 mat-toolbar {
     background-color: #3a2b20;
     color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*para pantallas computadora, televisor, tablet*/
@@ -49,7 +46,6 @@ mat-toolbar {
         display: flex;
         align-items: center;
     }
-    
 
     /*estilos para los botones con texto del menú*/
     .btn-menu{
@@ -64,13 +60,11 @@ mat-toolbar {
         color: #3a2b20;
     }
 
-
     /*estilos para los botones íconos*/
     .boton-icon-menu:hover{
         background-color: #efe7dd;
         color: #3a2b20;
     }
-
 
     /*estilo especial para ícono "home"*/
     .icono-home{
@@ -80,8 +74,10 @@ mat-toolbar {
 }
 
 
+
+
 /*para pantallas chicas (celular)*/
-@media(min-width: 290px) and (max-width: 700px) {
+@media(min-width: 300px) and (max-width: 700px) {
 
     .logo-inicio {
         width: 35px;
@@ -110,5 +106,19 @@ mat-toolbar {
             /* gira 2 vueltas completas, de 360 grados*/
         }
     }
+
+    /*estilos para acomodar los containers en sus posiciones (izquierda, centro, derecha)*/
+    .mat-toolbar {
+        display: flex;
+        justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+        align-items: center; /* Centra verticalmente los elementos dentro de cada contenedor */
+    }  
+    .container-izq,
+    .container-centro,
+    .container-der {
+        display: flex;
+        align-items: center;
+    }
+
 
 }

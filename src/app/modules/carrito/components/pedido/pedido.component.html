@@ -1,17 +1,26 @@
-<div class="container">
 
-    <h2>Carrito de compras</h2>
+<div class="encabezado">
+    <h1>Carrito de compras</h1>
+</div>
+
+<div class="container">
 
     <div class="row">
         <div class="col-lg-4">
             <ul class="list-group">
                 <li class="list-group-item" *ngFor="let pedido of coleccionPedidos">
 
-                    {{pedido.cantidad}}   {{pedido.producto.nombre}} - ${{pedido.total}}
+                    <div class="info">
+                        <p>Haz agregado {{pedido.cantidad}} libro(s),</p><br>
+                        <p>del título "{{pedido.producto.nombre}}".</p><br>
+                        <b>Total del pedido: ${{pedido.total}}</b><br>
+                    </div>
 
-                    <button class="btn btn-danger" (click)="quitarPedido(pedido)">
-                        <mat-icon>delete</mat-icon>
-                    </button>
+                    <div class="boton-eliminar">
+                        <button class="btn btn-danger" (click)="quitarPedido(pedido)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
 
                 </li>
             </ul>

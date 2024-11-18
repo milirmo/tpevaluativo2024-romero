@@ -1,15 +1,27 @@
-/*ESTILOS PARA LINKS REDES SOCIALES*/
+/*div general (form, maps)*/
+.container-form-maps, .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/*ESTILOS PARA pantallas grandes*/
+@media(min-width: 700px){
+
+/*redes sociales*/
 .row{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .col-lg-1{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 25px;
+    margin: 20px;
 }
 
 .redes-sociales{
@@ -27,16 +39,7 @@
 }
 
 
-/*ESTILOS PARA EL DIV GENERAL (form, maps)*/
-.container-form-maps, .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-
-/*ESTILOS PARA FORM CONTACTO*/
+/*form contacto*/
 .formulario{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -118,32 +121,126 @@ input::placeholder, textarea::placeholder{
     background-color: #614f42;
 }
 
-
-@media(min-width: 700px){
-
-    /*ESTILOS PARA MAPS*/
-    .maps{
+/*maps*/
+.maps{
     border-radius: 15px;
     width: 450px;
-    height: 620px;
-    }
+    height: 625px;
+}
 }
 
+
+
+
+/*ESTILOS PARA pantallas pequeñas*/
 @media(max-width: 700px){
 
-    /*estilo para el form*/
-    form{
-        padding: 15px;
-        width: 100%;
-    }
-    input{
-        padding: 15px;
-    }
+/*redes sociales*/
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
-    /*ESTILOS PARA MAPS*/
-    .maps{
-        border-radius: 15px;
-        width: 300px;
-        height: 300px;
-        }
+  .col-lg-1 {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+  }
+
+  .img-redes {
+    width: 60px; /* Tamaño ajustado para pantallas pequeñas */
+  }
+
+
+/*form contacto*/
+.formulario{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background-color: #ffffff;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10;
+    color: #423125;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+label{
+    color: #242424;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 17px 25px;
+    margin-bottom: 20px;
+    background-color: rgb(240, 239, 238);
+    border: none;
+    border-radius: 8px;
+    color: #727272;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #727272;
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a {
+    color: #47382c;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn{
+    font-size: 15px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 8px;
+    background-color: #423125;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #614f42;
+}
+
+/*maps*/
+.maps{
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+}
+    
 }

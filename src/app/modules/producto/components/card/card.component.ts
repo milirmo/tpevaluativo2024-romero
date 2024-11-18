@@ -30,9 +30,9 @@ export class CardComponent {
   constructor(
     public servicioCrud: CrudService,
     public servicioCarrito: CarritoService
-  ){}
+  ) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
     })
@@ -42,7 +42,7 @@ export class CardComponent {
   }
 
   // Función para mostrar más información de los productos
-  mostrarVer(info: Producto){
+  mostrarVer(info: Producto) {
     // Cambio estado del modal a true (ahora es visible)
     this.modalVisible = true;
 
@@ -50,25 +50,25 @@ export class CardComponent {
     this.productoSeleccionado = info;
   }
 
-  agregarProducto(info : Producto){
+  agregarProducto(info: Producto) {
 
     const stockDeseado = Math.trunc(this.stock);
 
     if (stockDeseado <= 0 || stockDeseado > info.stock) {
 
       Swal.fire({
-        title:"Error al agregar el producto",
-        text:"Stock insuficiente",
-        icon:"error"
+        title: "Error al agregar el producto",
+        text: "Stock insuficiente",
+        icon: "error"
       })
 
     } else {
       this.servicioCarrito.crearPedido(info, stockDeseado);
 
       Swal.fire({
-        title:"¡Excelente!",
-        text:"Producto añadido al carrito.",
-        icon:"success"
+        title: "¡Excelente!",
+        text: "Producto añadido al carrito.",
+        icon: "success"
       })
     }
   }

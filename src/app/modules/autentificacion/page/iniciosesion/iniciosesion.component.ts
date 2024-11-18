@@ -24,9 +24,7 @@ export class IniciosesionComponent {
   usuarios: Usuario = {
     uid: '',
     nombre: '',
-    apellido: '',
     email: '',
-    edad: 0,
     rol: '',
     password: ''
   }
@@ -128,7 +126,6 @@ export class IniciosesionComponent {
     const inputs = {
       uid: this.usuarios.uid = '',
       nombre: this.usuarios.nombre = '',
-      apellido: this.usuarios.apellido = '',
       email: this.usuarios.email = '',
       rol: this.usuarios.rol = '',
       password: this.usuarios.password = ''
