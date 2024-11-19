@@ -2,6 +2,9 @@
 mat-toolbar {
     background-color: #3a2b20;
     color: rgb(255, 255, 255);
+}
+
+button{
     font-family: Arial, Helvetica, sans-serif;
 }
 

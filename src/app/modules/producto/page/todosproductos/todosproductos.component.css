@@ -1,36 +1,26 @@
-/*ESTILOS IMAGEN PRESENTACIÓN*/
-.img-presentacion{
-    width: 100%;
-}
+/*ESTILOS PARA ENCABEZADO*/
+.container.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    max-width: 100%;
+  }
+  
+  .container.encabezado h1 {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; 
+    text-align: center;
+    margin: 0;
+  }
 
-/*ESTILOS CARRUSEL INFINITO*/
-
-.mi-carrusel {
-    overflow: hidden; /* Oculta el contenido que se sale del área visible del carrusel */
-    width: 100%; /* El carrusel ocupará el 100% del ancho de su contenedor */
-    margin-top: 30px; /* Espacio de 30px en la parte superior del carrusel */
-    margin-bottom: 30px; /* Espacio de 30px en la parte inferior del carrusel */
-}
-
-.mi-carrusel img {
-    width: 10%; /* Define que las imágenes ocuparán el 10% del ancho del contenedor, puedes ajustar este valor */
-    transition: transform 0.5s ease, filter 0.5s ease; /* Transiciones suaves de 0.5s para la transformación y los cambios en los filtros cuando ocurra un hover */
-}
-
-.mi-carrusel img:hover {
-    filter: grayscale(100%); /* Al pasar el ratón sobre una imagen, se aplicará un filtro de escala de grises, haciendo que se vea en blanco y negro */
-}
-
-@keyframes mi-slide {
-    0% { transform: translateX(0); } /* Al inicio de la animación, las imágenes están en su posición original (0% de desplazamiento) */
-    100% { transform: translateX(-100%); } /* Al final de la animación, las imágenes se desplazan completamente hacia la izquierda (-100%) */
-}
-
-.mi-carrusel-inner {
-    display: flex; /* Hace que las imágenes dentro del carrusel se alineen en fila horizontal */
-    animation: mi-slide 20s linear infinite; /* Aplica la animación "mi-slide" al contenedor. Dura 20 segundos y se repite de manera infinita y continua */
-}
-
-.mi-carrusel-inner img {
-    min-width: 10%; /* Asegura que cada imagen tenga al menos el 10% del ancho del contenedor, puedes ajustar este valor según tus necesidades */
-}
+  /*ESTILOS PARA ENCABEZADO RESPONSIVE (pantallas chicas)*/
+  @media (max-width: 700px){
+    .container.encabezado h1 {
+        font-size: 1.8rem;
+      }
+  }

@@ -35,7 +35,10 @@ export class TableComponent {
     oferta: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required)
   })
+
+
   constructor(public servicioCrud: CrudService) { }
+
 
   ngOnInit(): void {
     // subscribe -> método de notificación de cambios (observable)
@@ -43,7 +46,10 @@ export class TableComponent {
       this.coleccionProductos = producto;
     })
   }
+
+
   async agregarProducto() {
+
 
     if (this.producto.valid) {
       let nuevoProducto: Producto = {
@@ -84,10 +90,8 @@ export class TableComponent {
   // función vinculada al modal y el botón de la tabla
   mostrarBorrar(productoSeleccionado: Producto){
     this.modalVisibleProducto = true;
-
     this.productoSeleccionado = productoSeleccionado;
   }
-
   borrarProducto(){
     this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto)
     .then(respuesta => {
@@ -105,6 +109,7 @@ export class TableComponent {
       });
     })
   }
+
 
   //EDITAR PRODUCTOS
   mostrarEditar(productoSeleccionado: Producto){
@@ -124,7 +129,6 @@ export class TableComponent {
       stock: productoSeleccionado.stock
     })
   }
-
   editarProducto(){
     let datos: Producto = {
 

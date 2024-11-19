@@ -1,4 +1,26 @@
-/*ESTILO PARA LA IMG DE PRESENTACIÓN*/
-.img-presentacion{
-    width: 100%;
-}
+/*Estilos para el encabezado*/
+.container.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    max-width: 100%;
+  }
+  
+  .container.encabezado h1 {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; 
+    text-align: center;
+    margin: 0;
+  }
+
+  /*ESTILOS PARA ENCABEZADO RESPONSIVE (pantallas chicas)*/
+  @media (max-width: 700px){
+    .container.encabezado h1 {
+        font-size: 1.8rem;
+      }
+  }
