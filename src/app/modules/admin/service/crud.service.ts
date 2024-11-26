@@ -22,8 +22,10 @@ export class CrudService {
         const idProducto = this.database.createId();
         // Asignamos ID creado al atributo idProducto de la interfaz Producto
         producto.idProducto = idProducto;
+
         const resultado = await this.productosCollection.doc(idProducto).set(producto);
         resolve(resultado);
+        
       } catch (error){
         reject(error);
       }

@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./card-ficcion.component.css']
 })
 export class CardFiccionComponent {
+  
   // Colección de todos los productos de forma local
   coleccionProductos: Producto[] = [];
 
@@ -22,7 +23,7 @@ export class CardFiccionComponent {
   // Variable para manejar estado del modal
   modalVisible: boolean = false;
 
-  stock: number = 0
+  stock: number = 0;
   
 
   // Patentamos de forma local el servicio para acceder en él
@@ -46,23 +47,28 @@ export class CardFiccionComponent {
     this.servicioCarrito.iniciarCarrito();
   }
 
-  // Función para filtrar los productos de tipo "alimentación"
+
+  // FUNCION PARA FILTRAR PRODUCTOS CON LA CATEGORÍA
   mostrarProductoFiccion(){
     // Iteramos colección de productos con un 'forEach'
     this.coleccionProductos.forEach(producto => {
-      // Si es de tipo "alimentación" -> condicional
+
+      // Si es de tipo "policial" -> condicional
       if(producto.categoria === "ciencia-ficcion"){
-        // Lo sube/ guarda en la colección de productos de tipo "alimentación"
+        // Lo sube / guarda en la colección de productos de tipo "ficción"
         this.coleccionFiccion.push(producto);
       }
     })
   }
 
+
+  //FUNCION PARA MOSTRAR MODAL
   mostrarVer(info: Producto){
     this.modalVisible = true;
 
     this.productoSeleccionado = info;
   }
+
 
   //FUNCION PARA AGREGAR PRODUCTOS AL CARRITO
   agregarProducto(info: Producto) {

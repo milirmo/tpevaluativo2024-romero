@@ -46,13 +46,14 @@ export class CardPolicialComponent {
     this.servicioCarrito.iniciarCarrito();
   }
 
-  // Función para filtrar los productos de tipo "alimentación"
+  // Función para filtrar los productos de tipo "policial"
   mostrarProductoPolicial(){
     // Iteramos colección de productos con un 'forEach'
     this.coleccionProductos.forEach(producto => {
-      // Si es de tipo "alimentación" -> condicional
+
+      // Si es de tipo "policial" -> condicional
       if(producto.categoria === "policial"){
-        // Lo sube/ guarda en la colección de productos de tipo "alimentación"
+        // Lo sube/ guarda en la colección de productos de tipo "policial"
         this.coleccionPoliciales.push(producto);
       }
     })

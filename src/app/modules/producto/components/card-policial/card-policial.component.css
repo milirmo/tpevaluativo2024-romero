@@ -17,6 +17,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
 /* Efecto hover para la tarjeta */
@@ -98,6 +99,7 @@
 
 
 /* ESTILOS PARA MODAL */
+
   .modal-body {
     display: flex;
     justify-content: space-between; /* Separar la imagen y el contenido */
@@ -108,6 +110,10 @@
   
   .modal-dialog.modal-horizontal {
     max-width: 40%; /* Ajustamos el ancho del modal */
+  }
+
+  .modal-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   .body-content {
@@ -139,6 +145,7 @@
     flex-direction: column; /* Los elementos se apilan en una columna */
     align-items: center; /* Centra los elementos horizontalmente */
     gap: 1rem; /* Deja un espacio de 1rem entre cada elemento */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
   /* Estilo del div con la clase "cantidad" */

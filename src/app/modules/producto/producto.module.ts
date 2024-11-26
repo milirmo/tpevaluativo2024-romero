@@ -14,7 +14,7 @@ import { CardThrillerComponent } from './components/card-thriller/card-thriller.
 import { ThrillerComponent } from './page/thriller/thriller.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({

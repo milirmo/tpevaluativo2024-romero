@@ -7,7 +7,7 @@ const routes: Routes = [
 
   //routeo para modulo autentificacion > componente inicio de sesion
   { 
-    path: 'inicio-sesion', component: IniciosesionComponent
+    path: 'iniciosesion', component: IniciosesionComponent
   },
 
   //routeo para modulo autentificacion > componente registro

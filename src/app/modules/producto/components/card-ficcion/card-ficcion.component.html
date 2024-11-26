@@ -27,16 +27,16 @@
 
 
 <!-- Modal para ver más información -->
-<div class="modal fade" *ngIf="modalVisible" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-horizontal">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" *ngIf="modalVisible">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">{{productoSeleccionado.nombre}}</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" *ngIf="modalVisible">
                 <div class="body-content">
                     <img class="img-modal" src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
 

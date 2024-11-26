@@ -12,10 +12,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
-  // Creamos colección local de productos -> la definimos como array
+
+  // Creamos colección local de productos -> la definimos como arreglo
   coleccionProductos: Producto[] = [];
 
-  productoSeleccionado!: Producto; // ! <- tomar valores vacíos
+  productoSeleccionado!: Producto; // ! <-- tomar valores vacíos
 
   modalVisibleProducto: boolean = false;
 
@@ -50,7 +51,6 @@ export class TableComponent {
 
   async agregarProducto() {
 
-
     if (this.producto.valid) {
       let nuevoProducto: Producto = {
         idProducto: '',
@@ -64,6 +64,7 @@ export class TableComponent {
         oferta: this.producto.value.oferta!,
         stock: this.producto.value.stock!
       }
+
       await this.servicioCrud.crearProducto(nuevoProducto)
         .then(producto => {
 
