@@ -1,11 +1,11 @@
 .container {
     text-align: center; /* Centra el contenido horizontalmente */
-    margin: 30px auto; /* Margen superior e inferior de 50px y centrado horizontal */
-    padding: 20px;
+    margin-top: 30px; /* Margen  y centrado horizontal */
+    margin-bottom: 30px;
+    padding: 15px;
     background-color: #4b3222;
     border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 100%;
 }
 
 h2 {
@@ -27,7 +27,9 @@ h2, p{
 /* Media query para pantallas pequeñas */
 @media (max-width: 700px) {
     
-    /* Estilos específicos para pantallas de hasta 600px de ancho */
+    .container{
+        width: 100%;
+    }
 
     .banner{
         scale: 0.9;
@@ -45,3 +47,11 @@ h2, p{
         font-size: 2em; /* Reducir tamaño de fuente de las flechas */
     }
 }
+
+/*Estilos para pantallas grandes */
+@media (min-width: 700px) {
+    .container{
+        width: 40%;
+    }
+}
+
