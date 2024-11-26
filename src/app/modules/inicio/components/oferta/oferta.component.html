@@ -20,7 +20,10 @@
 
 
             <div class="contenedor-precioYboton">
-                <p class="card-precio">$ {{producto.precio}}</p>
+                <p class="card-precio">
+                    <span style="text-decoration: line-through;">${{producto.precio}}</span> 
+                     ${{producto.precio - (producto.precio * 0.20)}}
+                </p>
 
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#verMas"
                     (click)="mostrarVer(producto)">Ver más</button>
